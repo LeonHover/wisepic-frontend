@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,6 +73,60 @@
             font-size: 24px;
             cursor: pointer;
             color: #FAFAF9;
+        }
+
+        /* 语言切换器 */
+        .language-switcher {
+            display: flex;
+            align-items: center;
+        }
+
+        .language-switcher select {
+            background-color: #1A1A1E;
+            color: #FAFAF9;
+            border: 1px solid #2A2A2E;
+            border-radius: 8px;
+            padding: 8px 30px 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: border-color 0.3s;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23FAFAF9' d='M6 8.825L1.175 4 2.238 2.938 6 6.7l3.763-3.762L10.825 4z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 12px;
+        }
+
+        .language-switcher select:hover {
+            border-color: #32D583;
+        }
+
+        .language-switcher select:focus {
+            outline: none;
+            border-color: #32D583;
+            box-shadow: 0 0 0 2px rgba(50, 213, 131, 0.2);
+        }
+
+        /* 移动端语言切换器适配 */
+        @media (max-width: 768px) {
+            .language-switcher {
+                margin: 10px 0;
+                order: 3;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .language-switcher select {
+                width: 150px;
+                padding: 8px 30px 8px 12px;
+                background-position: right 12px center;
+            }
+
+            .nav-links.active + .language-switcher {
+                display: flex;
+            }
         }
 
         /* 内容区域 */
@@ -261,12 +315,18 @@
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo">WisePic</a>
+                <a href="index.html" class="logo" data-i18n="common.siteName">WisePic</a>
                 <div class="nav-links">
-                    <a href="index.html">首页</a>
-                    <a href="terms.html">用户协议</a>
-                    <a href="privacy.html">隐私政策</a>
-                    <a href="third-party.html">第三方SDK</a>
+                    <a href="index.html" data-i18n="common.home">首页</a>
+                    <a href="terms.html" data-i18n="common.terms">用户协议</a>
+                    <a href="privacy.html" data-i18n="common.privacy">隐私政策</a>
+                    <a href="third-party.html" data-i18n="common.thirdParty">第三方SDK</a>
+                </div>
+                <div class="language-switcher">
+                    <select id="languageSelect">
+                        <option value="zh-CN" data-i18n="common.chinese">中文</option>
+                        <option value="en" data-i18n="common.english">English</option>
+                    </select>
                 </div>
                 <button class="mobile-menu-btn">☰</button>
             </nav>
@@ -276,7 +336,7 @@
     <!-- 主内容 -->
     <div class="container">
         <div class="content">
-            <h1>WisePic 用户协议</h1>
+            <h1 data-i18n="terms.pageTitle">WisePic 用户协议</h1>
             <p class="last-updated">最后更新日期：【请填写】</p>
 
             <p>欢迎使用 WisePic 图片编辑软件（以下简称"本软件"）。请仔细阅读本用户协议（以下简称"本协议"）。您在使用本软件前，应当阅读并同意本协议的所有条款。如果您不同意本协议的任何条款，请不要使用本软件。</p>
@@ -334,7 +394,7 @@
             <p style="margin-top: 40px;"><strong>如果您对本协议有任何疑问，请联系我们：</strong></p>
             <p>邮箱：【请填写】</p>
 
-            <a href="index.html" class="back-to-home">← 返回首页</a>
+            <a href="index.html" class="back-to-home" data-i18n="terms.backToHome">← 返回首页</a>
         </div>
     </div>
 
@@ -343,40 +403,41 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>WisePic</h3>
-                    <p style="color: #CCCCCC;">让图片编辑变得更简单、更智能。</p>
+                    <h3 data-i18n="common.siteName">WisePic</h3>
+                    <p style="color: #CCCCCC;" data-i18n="index.footerTagline">让图片编辑变得更简单、更智能。</p>
                 </div>
                 <div class="footer-column">
-                    <h3>快速链接</h3>
+                    <h3 data-i18n="index.quickLinks">快速链接</h3>
                     <ul>
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="index.html#features">功能</a></li>
-                        <li><a href="index.html#download">下载</a></li>
+                        <li><a href="index.html" data-i18n="common.home">首页</a></li>
+                        <li><a href="index.html#features" data-i18n="common.features">功能</a></li>
+                        <li><a href="index.html#download" data-i18n="common.download">下载</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>法律条款</h3>
+                    <h3 data-i18n="index.legal">法律条款</h3>
                     <ul>
-                        <li><a href="terms.html">用户协议</a></li>
-                        <li><a href="privacy.html">隐私政策</a></li>
-                        <li><a href="third-party.html">第三方SDK</a></li>
+                        <li><a href="terms.html" data-i18n="common.terms">用户协议</a></li>
+                        <li><a href="privacy.html" data-i18n="common.privacy">隐私政策</a></li>
+                        <li><a href="third-party.html" data-i18n="common.thirdParty">第三方SDK</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>联系我们</h3>
+                    <h3 data-i18n="common.contact">联系我们</h3>
                     <ul>
                         <li><a href="mailto:contact@wisepic.com">contact@wisepic.com</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#" data-i18n="index.github">GitHub</a></li>
+                        <li><a href="#" data-i18n="index.twitter">Twitter</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>© 2026 WisePic. 保留所有权利。</p>
+                <p data-i18n="common.copyright">© 2026 WisePic. 保留所有权利。</p>
             </div>
         </div>
     </footer>
 
+    <script src="js/i18n.js"></script>
     <script>
         // 移动端菜单切换
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');

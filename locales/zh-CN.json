@@ -1,0 +1,60 @@
+{
+  "common": {
+    "siteName": "WisePic",
+    "home": "首页",
+    "features": "功能",
+    "download": "下载",
+    "terms": "用户协议",
+    "privacy": "隐私政策",
+    "thirdParty": "第三方SDK",
+    "contact": "联系我们",
+    "contactEmail": "contact@wisepic.com",
+    "copyright": "© 2026 WisePic. 保留所有权利。",
+    "language": "语言",
+    "chinese": "中文",
+    "english": "English"
+  },
+  "index": {
+    "heroTitle": "智能图片编辑，简单如你所想",
+    "heroDescription": "WisePic 是一款功能强大的图片编辑工具，提供剪裁、旋转、滤镜、基础调整、压缩和格式转换等核心功能，让您的图片处理变得轻松高效。",
+    "ctaButton": "立即下载",
+    "featuresTitle": "核心功能",
+    "feature1Title": "智能剪裁",
+    "feature1Desc": "支持多种比例剪裁，智能识别图片主体，一键裁剪出最佳构图。",
+    "feature2Title": "灵活旋转",
+    "feature2Desc": "任意角度旋转、水平垂直翻转，轻松调整图片方向。",
+    "feature3Title": "丰富滤镜",
+    "feature3Desc": "内置数十款精美滤镜，一键应用，瞬间提升图片质感。",
+    "feature4Title": "基础调整",
+    "feature4Desc": "亮度、对比度、饱和度、锐度等精细调整，满足专业需求。",
+    "feature5Title": "智能压缩",
+    "feature5Desc": "高效压缩图片大小，保持画质的同时显著减小文件体积。",
+    "feature6Title": "格式转换",
+    "feature6Desc": "支持 JPG、PNG、WEBP、GIF 等多种格式互相转换。",
+    "downloadTitle": "立即体验 WisePic",
+    "downloadText": "目前支持 Android 平台，iOS 版本即将上线",
+    "googlePlay": "Google Play 下载",
+    "directDownload": "直接下载 APK",
+    "downloadNote": "*下载链接即将公布，敬请期待",
+    "footerTagline": "让图片编辑变得更简单、更智能。",
+    "quickLinks": "快速链接",
+    "legal": "法律条款",
+    "github": "GitHub",
+    "twitter": "Twitter"
+  },
+  "terms": {
+    "title": "用户协议",
+    "pageTitle": "WisePic 用户协议",
+    "backToHome": "← 返回首页"
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "pageTitle": "WisePic 隐私政策",
+    "backToHome": "← 返回首页"
+  },
+  "thirdParty": {
+    "title": "第三方SDK",
+    "pageTitle": "第三方 SDK 列表",
+    "backToHome": "← 返回首页"
+  }
+}

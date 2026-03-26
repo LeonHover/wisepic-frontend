@@ -1,0 +1,60 @@
+{
+  "common": {
+    "siteName": "WisePic",
+    "home": "Home",
+    "features": "Features",
+    "download": "Download",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "thirdParty": "Third-party SDK",
+    "contact": "Contact Us",
+    "contactEmail": "contact@wisepic.com",
+    "copyright": "© 2026 WisePic. All rights reserved.",
+    "language": "Language",
+    "chinese": "中文",
+    "english": "English"
+  },
+  "index": {
+    "heroTitle": "Smart Image Editing, As Simple As You Imagine",
+    "heroDescription": "WisePic is a powerful image editing tool that provides core features like cropping, rotation, filters, basic adjustments, compression, and format conversion, making your image processing easy and efficient.",
+    "ctaButton": "Download Now",
+    "featuresTitle": "Core Features",
+    "feature1Title": "Smart Cropping",
+    "feature1Desc": "Supports multiple aspect ratios, intelligently recognizes image subjects, and crops out the best composition with one click.",
+    "feature2Title": "Flexible Rotation",
+    "feature2Desc": "Rotate at any angle, flip horizontally or vertically, and easily adjust image orientation.",
+    "feature3Title": "Rich Filters",
+    "feature3Desc": "Built-in dozens of exquisite filters, apply with one click to instantly enhance image quality.",
+    "feature4Title": "Basic Adjustments",
+    "feature4Desc": "Fine-tune brightness, contrast, saturation, sharpness, and more to meet professional needs.",
+    "feature5Title": "Smart Compression",
+    "feature5Desc": "Efficiently compress image size while maintaining quality and significantly reducing file size.",
+    "feature6Title": "Format Conversion",
+    "feature6Desc": "Supports mutual conversion between various formats such as JPG, PNG, WEBP, and GIF.",
+    "downloadTitle": "Experience WisePic Now",
+    "downloadText": "Currently available on Android, iOS version coming soon",
+    "googlePlay": "Download on Google Play",
+    "directDownload": "Direct APK Download",
+    "downloadNote": "*Download links will be announced soon, stay tuned",
+    "footerTagline": "Making image editing simpler and smarter.",
+    "quickLinks": "Quick Links",
+    "legal": "Legal Terms",
+    "github": "GitHub",
+    "twitter": "Twitter"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "pageTitle": "WisePic Terms of Service",
+    "backToHome": "← Back to Home"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "pageTitle": "WisePic Privacy Policy",
+    "backToHome": "← Back to Home"
+  },
+  "thirdParty": {
+    "title": "Third-party SDK",
+    "pageTitle": "Third-party SDK List",
+    "backToHome": "← Back to Home"
+  }
+}

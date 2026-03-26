@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户协议 - WisePic</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            line-height: 1.8;
+            color: #FAFAF9;
+            background-color: #171A21;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 导航栏 */
+        header {
+            background-color: #1A1A1E;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #2A2A2E;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FAFAF9;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #FAFAF9;
+            font-weight: 500;
+            transition: color 0.3s;
+            opacity: 0.8;
+        }
+
+        .nav-links a:hover {
+            color: #32D583;
+            opacity: 1;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #FAFAF9;
+        }
+
+        /* 内容区域 */
+        .content {
+            background: #1A1A1E;
+            border-radius: 16px;
+            padding: 50px;
+            margin: 40px 0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            border: 1px solid #2A2A2E;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #FAFAF9;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: 40px 0 20px;
+            color: #FAFAF9;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2A2A2E;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 25px 0 15px;
+            color: #CCCCCC;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #CCCCCC;
+        }
+
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #CCCCCC;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #AAAAAA;
+            font-style: italic;
+            margin-bottom: 40px;
+        }
+
+        .back-to-home {
+            display: inline-block;
+            margin-top: 30px;
+            color: #32D583;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-to-home:hover {
+            color: #28C173;
+            text-decoration: underline;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #1A1A1E;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+            border-top: 1px solid #2A2A2E;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #FAFAF9;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column a {
+            color: #CCCCCC;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: #32D583;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #2A2A2E;
+            color: #AAAAAA;
+            font-size: 14px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #1A1A1E;
+                padding: 20px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                border-top: 1px solid #2A2A2E;
+                z-index: 99;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 15px 20px;
+                border-bottom: 1px solid #2A2A2E;
+            }
+
+            .nav-links a:last-child {
+                border-bottom: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        /* 中等屏幕适配 */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                max-width: 90%;
+            }
+        }
+
+        /* 大屏幕适配 */
+        @media (min-width: 1440px) {
+            .container {
+                max-width: 1400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">WisePic</a>
+                <div class="nav-links">
+                    <a href="index.html">首页</a>
+                    <a href="terms.html">用户协议</a>
+                    <a href="privacy.html">隐私政策</a>
+                    <a href="third-party.html">第三方SDK</a>
+                </div>
+                <button class="mobile-menu-btn">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主内容 -->
+    <div class="container">
+        <div class="content">
+            <h1>WisePic 用户协议</h1>
+            <p class="last-updated">最后更新日期：【请填写】</p>
+
+            <p>欢迎使用 WisePic 图片编辑软件（以下简称"本软件"）。请仔细阅读本用户协议（以下简称"本协议"）。您在使用本软件前，应当阅读并同意本协议的所有条款。如果您不同意本协议的任何条款，请不要使用本软件。</p>
+
+            <h2>1. 协议的接受与修改</h2>
+            <p>1.1 您通过下载、安装、使用本软件，即表示您已充分阅读、理解并同意接受本协议的全部条款。</p>
+            <p>1.2 我们有权根据需要不时地修改本协议。修改后的协议将在本软件上公布，恕不另行单独通知。如果您继续使用本软件，则视为您已接受修改后的协议。</p>
+
+            <h2>2. 服务说明</h2>
+            <p>2.1 WisePic 是一款图片编辑工具，提供剪裁、旋转、滤镜、基础调整、压缩和格式转换等功能。</p>
+            <p>2.2 本软件的部分功能可能需要连接互联网。您理解并同意，我们会尽最大努力保障服务的连续性和稳定性，但不对网络服务的及时性、安全性、准确性作任何担保。</p>
+
+            <h2>3. 使用规则</h2>
+            <p>3.1 您承诺使用本软件的行为符合法律法规、社会公德，且不会侵犯任何第三方的合法权益。</p>
+            <p>3.2 您不得利用本软件从事以下行为：</p>
+            <ul>
+                <li>上传、传输或分享任何非法、侵权、诽谤、淫秽、暴力等内容；</li>
+                <li>未经授权访问、干扰、破坏本软件或相关服务器；</li>
+                <li>未经允许收集其他用户的信息；</li>
+                <li>其他违反法律法规或本协议约定的行为。</li>
+            </ul>
+            <p>3.3 您应妥善保管自己的设备及账户信息，并对使用该设备及账户进行的所有操作承担法律责任。</p>
+
+            <h2>4. 知识产权</h2>
+            <p>4.1 本软件的所有内容，包括但不限于软件代码、界面设计、图标、文字、图片、音频、视频等，均受著作权法、商标法及其他相关法律保护。</p>
+            <p>4.2 未经我们书面同意，您不得以任何形式复制、修改、传播、出租、出售本软件的任何部分。</p>
+            <p>4.3 您通过本软件编辑、生成的图片，其知识产权归您所有，但您授予我们为提供服务所需的使用权。</p>
+
+            <h2>5. 免责声明</h2>
+            <p>5.1 本软件按"现状"提供，我们不保证其功能不会中断或没有错误。</p>
+            <p>5.2 对于因使用或无法使用本软件而导致的任何直接、间接、附带、惩罚性损失，我们不承担任何责任。</p>
+            <p>5.3 我们不保证通过本软件编辑的图片符合您的特定需求，也不对编辑结果作任何明示或默示的担保。</p>
+
+            <h2>6. 隐私保护</h2>
+            <p>6.1 我们重视您的隐私，具体政策请参见《<a href="privacy.html">隐私政策</a>》。</p>
+            <p>6.2 您理解并同意，为提供和改进服务，我们可能会收集、使用您的非个人身份信息。</p>
+
+            <h2>7. 第三方服务</h2>
+            <p>7.1 本软件可能包含第三方提供的服务或链接。这些服务由第三方独立提供，我们不对其内容、隐私政策或服务承担责任。</p>
+            <p>7.2 第三方服务的使用可能受其自身条款约束，请您在使用前仔细阅读。</p>
+
+            <h2>8. 协议的终止</h2>
+            <p>8.1 您可随时停止使用本软件。</p>
+            <p>8.2 如果您违反本协议，我们有权随时终止向您提供服务，且无需提前通知。</p>
+
+            <h2>9. 法律适用与争议解决</h2>
+            <p>9.1 本协议的订立、执行、解释及争议解决均适用中华人民共和国法律。</p>
+            <p>9.2 因本协议引起的或与本协议有关的任何争议，双方应友好协商解决；协商不成的，任何一方均可向【请填写】人民法院提起诉讼。</p>
+
+            <h2>10. 其他</h2>
+            <p>10.1 本协议构成您与我们之间就使用本软件达成的完整协议，取代任何先前的口头或书面约定。</p>
+            <p>10.2 如果我们未行使或执行本协议的任何权利或规定，不构成对该权利或规定的放弃。</p>
+            <p>10.3 如果本协议的任何条款被认定为无效或不可执行，该条款应在最小必要范围内进行修改，其余条款仍然有效。</p>
+
+            <p style="margin-top: 40px;"><strong>如果您对本协议有任何疑问，请联系我们：</strong></p>
+            <p>邮箱：【请填写】</p>
+
+            <a href="index.html" class="back-to-home">← 返回首页</a>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>WisePic</h3>
+                    <p style="color: #CCCCCC;">让图片编辑变得更简单、更智能。</p>
+                </div>
+                <div class="footer-column">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="index.html#features">功能</a></li>
+                        <li><a href="index.html#download">下载</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>法律条款</h3>
+                    <ul>
+                        <li><a href="terms.html">用户协议</a></li>
+                        <li><a href="privacy.html">隐私政策</a></li>
+                        <li><a href="third-party.html">第三方SDK</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li><a href="mailto:contact@wisepic.com">contact@wisepic.com</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2026 WisePic. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            // 更新按钮图标
+            this.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // 点击菜单链接后关闭移动端菜单
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.textContent = '☰';
+                }
+            });
+        });
+
+        // 窗口大小变化时重置菜单状态
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            }
+        });
+    </script>
+</body>
+</html>

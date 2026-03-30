@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -195,6 +195,50 @@
             text-decoration: underline;
         }
 
+        .highlight {
+            background-color: rgba(23, 26, 33, 0.55);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border: 1px solid #2A2A2E;
+            border-left: 4px solid #32D583;
+        }
+
+        .highlight p {
+            margin-bottom: 0;
+            color: #CCCCCC;
+        }
+
+        .highlight strong {
+            color: #FAFAF9;
+        }
+
+        .legal-doc {
+            display: none;
+        }
+
+        html[lang="zh-CN"] .legal-doc--zh,
+        html[lang="en"] .legal-doc--en {
+            display: block;
+        }
+
+        .doc-divider {
+            border: 0;
+            border-top: 1px solid #2A2A2E;
+            margin: 2rem 0;
+        }
+
+        .legal-doc a {
+            color: #32D583;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .legal-doc a:hover {
+            color: #28C173;
+            text-decoration: underline;
+        }
+
         /* 页脚 */
         footer {
             background-color: #1A1A1E;
@@ -336,63 +380,269 @@
     <!-- 主内容 -->
     <div class="container">
         <div class="content">
-            <h1 data-i18n="terms.pageTitle">WisePic 用户协议</h1>
-            <p class="last-updated">最后更新日期：【请填写】</p>
+            <h1 data-i18n="terms.pageTitle">WisePic Terms of Service</h1>
 
-            <p>欢迎使用 WisePic 图片编辑软件（以下简称"本软件"）。请仔细阅读本用户协议（以下简称"本协议"）。您在使用本软件前，应当阅读并同意本协议的所有条款。如果您不同意本协议的任何条款，请不要使用本软件。</p>
+            <div class="legal-doc legal-doc--zh">
+                <p class="last-updated">生效日期：2026-03-31<br>更新日期：2026-03-31</p>
 
-            <h2>1. 协议的接受与修改</h2>
-            <p>1.1 您通过下载、安装、使用本软件，即表示您已充分阅读、理解并同意接受本协议的全部条款。</p>
-            <p>1.2 我们有权根据需要不时地修改本协议。修改后的协议将在本软件上公布，恕不另行单独通知。如果您继续使用本软件，则视为您已接受修改后的协议。</p>
+                <p>欢迎您使用 WisePic（wisepic/慧图大师，以下简称“本应用”或“服务”）。本《用户协议》（以下简称“本协议”）由您与 WisePic 运营方（以下简称“我们”）就您使用本应用相关事项所订立。</p>
 
-            <h2>2. 服务说明</h2>
-            <p>2.1 WisePic 是一款图片编辑工具，提供剪裁、旋转、滤镜、基础调整、压缩和格式转换等功能。</p>
-            <p>2.2 本软件的部分功能可能需要连接互联网。您理解并同意，我们会尽最大努力保障服务的连续性和稳定性，但不对网络服务的及时性、安全性、准确性作任何担保。</p>
+                <div class="highlight">
+                    <p>在您开始使用前，请务必仔细阅读并充分理解本协议。<strong>当您下载、安装、打开、注册/登录（如有）或继续使用本应用，即视为您已阅读并同意本协议的全部条款。</strong>如您不同意本协议，请停止使用并卸载本应用。</p>
+                </div>
 
-            <h2>3. 使用规则</h2>
-            <p>3.1 您承诺使用本软件的行为符合法律法规、社会公德，且不会侵犯任何第三方的合法权益。</p>
-            <p>3.2 您不得利用本软件从事以下行为：</p>
-            <ul>
-                <li>上传、传输或分享任何非法、侵权、诽谤、淫秽、暴力等内容；</li>
-                <li>未经授权访问、干扰、破坏本软件或相关服务器；</li>
-                <li>未经允许收集其他用户的信息；</li>
-                <li>其他违反法律法规或本协议约定的行为。</li>
-            </ul>
-            <p>3.3 您应妥善保管自己的设备及账户信息，并对使用该设备及账户进行的所有操作承担法律责任。</p>
+                <hr class="doc-divider">
 
-            <h2>4. 知识产权</h2>
-            <p>4.1 本软件的所有内容，包括但不限于软件代码、界面设计、图标、文字、图片、音频、视频等，均受著作权法、商标法及其他相关法律保护。</p>
-            <p>4.2 未经我们书面同意，您不得以任何形式复制、修改、传播、出租、出售本软件的任何部分。</p>
-            <p>4.3 您通过本软件编辑、生成的图片，其知识产权归您所有，但您授予我们为提供服务所需的使用权。</p>
+                <h2>1. 协议范围与变更</h2>
+                <ol>
+                    <li>本协议适用于您使用本应用的全部功能与服务。</li>
+                    <li>我们可能根据法律法规或业务调整对本协议进行更新。更新后的协议将在应用内或相关页面公示，并自公示之日起生效（或另行注明生效日期）。若您继续使用，即视为接受更新后的协议。</li>
+                </ol>
 
-            <h2>5. 免责声明</h2>
-            <p>5.1 本软件按"现状"提供，我们不保证其功能不会中断或没有错误。</p>
-            <p>5.2 对于因使用或无法使用本软件而导致的任何直接、间接、附带、惩罚性损失，我们不承担任何责任。</p>
-            <p>5.3 我们不保证通过本软件编辑的图片符合您的特定需求，也不对编辑结果作任何明示或默示的担保。</p>
+                <hr class="doc-divider">
 
-            <h2>6. 隐私保护</h2>
-            <p>6.1 我们重视您的隐私，具体政策请参见《<a href="privacy.html">隐私政策</a>》。</p>
-            <p>6.2 您理解并同意，为提供和改进服务，我们可能会收集、使用您的非个人身份信息。</p>
+                <h2>2. 服务说明</h2>
+                <ol>
+                    <li>本应用提供图片处理工具与功能（例如压缩、裁剪、拼接、格式转换、背景移除、EXIF 查看等）。</li>
+                    <li>本应用部分功能可能需要联网（例如广告展示、购买校验、错误上报、检查更新、在线帮助/反馈等）。</li>
+                    <li>我们可能对服务内容进行新增、修改、暂停或终止，并将尽合理努力进行提示。</li>
+                </ol>
 
-            <h2>7. 第三方服务</h2>
-            <p>7.1 本软件可能包含第三方提供的服务或链接。这些服务由第三方独立提供，我们不对其内容、隐私政策或服务承担责任。</p>
-            <p>7.2 第三方服务的使用可能受其自身条款约束，请您在使用前仔细阅读。</p>
+                <hr class="doc-divider">
 
-            <h2>8. 协议的终止</h2>
-            <p>8.1 您可随时停止使用本软件。</p>
-            <p>8.2 如果您违反本协议，我们有权随时终止向您提供服务，且无需提前通知。</p>
+                <h2>3. 账号与安全（如适用）</h2>
+                <ol>
+                    <li>本应用可能无需注册即可使用；如未来提供账号体系，您应提供真实、准确、合法的信息并及时更新。</li>
+                    <li>您应妥善保管账号与设备信息，并对在您的账号/设备下发生的行为承担责任。</li>
+                    <li>如发现账号异常或未经授权使用，请及时联系我们。</li>
+                </ol>
 
-            <h2>9. 法律适用与争议解决</h2>
-            <p>9.1 本协议的订立、执行、解释及争议解决均适用中华人民共和国法律。</p>
-            <p>9.2 因本协议引起的或与本协议有关的任何争议，双方应友好协商解决；协商不成的，任何一方均可向【请填写】人民法院提起诉讼。</p>
+                <hr class="doc-divider">
 
-            <h2>10. 其他</h2>
-            <p>10.1 本协议构成您与我们之间就使用本软件达成的完整协议，取代任何先前的口头或书面约定。</p>
-            <p>10.2 如果我们未行使或执行本协议的任何权利或规定，不构成对该权利或规定的放弃。</p>
-            <p>10.3 如果本协议的任何条款被认定为无效或不可执行，该条款应在最小必要范围内进行修改，其余条款仍然有效。</p>
+                <h2>4. 个人信息与隐私</h2>
+                <p>我们将依据《<a href="privacy.html">隐私政策</a>》处理您的个人信息并采取合理安全措施保护数据。请您在使用本应用前阅读并理解《<a href="privacy.html">隐私政策</a>》。</p>
 
-            <p style="margin-top: 40px;"><strong>如果您对本协议有任何疑问，请联系我们：</strong></p>
-            <p>邮箱：【请填写】</p>
+                <hr class="doc-divider">
+
+                <h2>5. 知识产权</h2>
+                <ol>
+                    <li>本应用及其相关内容（包括但不限于软件、界面、标识、文字、图片、音视频、算法与模型等）的知识产权归我们或相关权利人所有。</li>
+                    <li>在您遵守本协议的前提下，我们授予您一项个人的、可撤销的、不可转让的、非独占的许可，用于在您的移动设备上安装与使用本应用。</li>
+                    <li>未经我们书面许可，您不得对本应用进行反向工程、反编译、反汇编，不得绕过或破坏技术保护措施，不得将本应用用于任何非法用途。</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>6. 您的内容与授权</h2>
+                <ol>
+                    <li><strong>您对您导入、编辑、保存或分享的图片/内容（以下简称“用户内容”）享有相应权利。</strong>我们不会因为您使用本应用而取得用户内容的所有权。</li>
+                    <li>您应确保对用户内容拥有合法权利或已获得必要授权，不得处理、上传、分享侵权、违法或侵犯他人隐私的内容。</li>
+                    <li>本应用以本地处理为主。除非您主动使用需要上传的功能（如未来的云同步/在线分享等），我们不会主动将您的用户内容上传至我们的服务器。</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>7. 禁止行为</h2>
+                <p>您在使用本应用时不得从事以下行为（包括但不限于）：</p>
+                <ol>
+                    <li>违反法律法规、监管规定或公序良俗的行为；</li>
+                    <li>侵害他人知识产权、肖像权、名誉权、隐私权等合法权益；</li>
+                    <li>利用本应用制作、传播违法违规信息或不当内容；</li>
+                    <li>通过自动化脚本、抓取、篡改、注入等方式干扰本应用正常运行；</li>
+                    <li>规避付费机制、广告机制或以不正当方式获取权益；</li>
+                    <li>其他我们有合理理由认为不适当的行为。</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>8. 付费服务、订阅与退款（如适用）</h2>
+                <ol>
+                    <li>本应用可能提供一次性购买、工具包购买、订阅会员、去广告等付费服务（以应用内展示为准）。</li>
+                    <li>购买与订阅通常通过应用商店（如 Apple App Store/Google Play）完成，价格、周期、权益与自动续费规则以商店页面与应用内提示为准。</li>
+                    <li>如您订阅了自动续费服务，您可在对应应用商店的订阅管理中取消续费。</li>
+                    <li>退款规则通常由应用商店制定并处理。我们会在合理范围内提供必要协助，但不保证退款一定成功。</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>9. 第三方服务与链接</h2>
+                <p>本应用可能集成第三方 SDK/服务或包含第三方链接（例如广告、统计、支付与订阅、客服等）。第三方服务由其自行运营并适用其自身的条款与隐私政策。我们建议您阅读相关规则；因第三方服务引发的争议或损失，除法律另有规定外，我们不承担责任。</p>
+
+                <hr class="doc-divider">
+
+                <h2>10. 免责声明</h2>
+                <ol>
+                    <li>本应用按“现状”和“可用性”提供。我们会尽合理努力保障服务稳定与安全，但不对服务的持续可用、无错误或满足您的全部需求作出保证。</li>
+                    <li>图片处理结果可能因设备性能、系统版本、图片质量、参数选择等因素而不同；您应自行评估并承担使用风险。</li>
+                    <li>在法律允许的范围内，我们不对间接损失、数据丢失、利润损失等承担责任。</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>11. 责任限制</h2>
+                <p>在法律允许的最大范围内，无论基于合同、侵权（含过失）或其他法律理论，因您使用或无法使用本应用所导致的任何损失，我们的责任以您为相关付费服务已实际支付的金额为上限（如适用）。部分司法辖区不允许限制某些责任，上述限制可能不适用于您。</p>
+
+                <hr class="doc-divider">
+
+                <h2>12. 赔偿（Indemnification）</h2>
+                <p>如因您违反本协议、违法使用本应用或侵犯第三方权益导致我们遭受索赔、处罚或损失，您应承担相应责任并赔偿我们因此产生的合理费用（包括律师费等）。</p>
+
+                <hr class="doc-divider">
+
+                <h2>13. 终止</h2>
+                <ol>
+                    <li>如您违反本协议或存在风险行为，我们可在合理范围内采取限制功能、暂停或终止服务等措施。</li>
+                    <li>您可随时停止使用并卸载本应用。</li>
+                    <li>本协议中按其性质应当继续有效的条款（如知识产权、免责声明、责任限制、争议解决等）在终止后仍然有效。</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>14. 适用法律与争议解决</h2>
+                <ol>
+                    <li>本协议的订立、效力、解释、履行与争议解决，适用您下载或使用本应用所在地区的强制性法律规定；如无特别规定，适用中华人民共和国法律（不含冲突法规则）。</li>
+                    <li>因本协议或使用本应用产生的争议，双方应友好协商解决；协商不成的，提交我们住所地/主要经营地有管辖权的人民法院解决（以法律允许为限）。</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>15. 联系我们</h2>
+                <p>如您对本协议有任何疑问，可通过以下方式联系我们：</p>
+                <ul>
+                    <li>邮箱：support@wisepic.app（示例；请以应用内展示为准）</li>
+                </ul>
+            </div>
+
+            <div class="legal-doc legal-doc--en">
+                <p class="last-updated">Effective Date: 2026-03-31<br>Last Updated: 2026-03-31</p>
+
+                <p>Welcome to WisePic (wisepic, the “App” or “Service”). These Terms of Service (the “Terms”) are a legally binding agreement between you and the operator of WisePic (“we”, “us”, or “our”) governing your use of the App.</p>
+
+                <div class="highlight">
+                    <p>Please read these Terms carefully. <strong>By downloading, installing, opening, registering/logging in (if available), or otherwise using the App, you agree to be bound by these Terms.</strong> If you do not agree, do not use the App and uninstall it.</p>
+                </div>
+
+                <hr class="doc-divider">
+
+                <h2>1. Scope and Changes</h2>
+                <ol>
+                    <li>These Terms apply to all features and services provided through the App.</li>
+                    <li>We may update these Terms to comply with law or to reflect product changes. Updated Terms will be published in the App or on a relevant page and will take effect on the stated effective date. Continued use of the App means you accept the updated Terms.</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>2. The Service</h2>
+                <ol>
+                    <li>The App provides image processing tools and features such as compression, cropping, collage, format conversion, background removal, and EXIF viewing.</li>
+                    <li>Some features may require network access (e.g., ads, purchase/subscription verification, crash reporting, update checks, help/feedback).</li>
+                    <li>We may add, modify, suspend, or discontinue parts of the Service, and we will make reasonable efforts to provide notice when appropriate.</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>3. Accounts and Security (If Applicable)</h2>
+                <ol>
+                    <li>The App may be usable without an account. If we introduce accounts, you agree to provide accurate and lawful information and keep it updated.</li>
+                    <li>You are responsible for safeguarding your account credentials and device access and for all activity under your account/device.</li>
+                    <li>If you suspect unauthorized use, contact us promptly.</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>4. Privacy</h2>
+                <p>We process personal information in accordance with our <a href="privacy.html">Privacy Policy</a>. Please read the <a href="privacy.html">Privacy Policy</a> before using the App.</p>
+
+                <hr class="doc-divider">
+
+                <h2>5. Intellectual Property</h2>
+                <ol>
+                    <li>The App and related content (including software, UI, trademarks, text, graphics, audio/video, algorithms, and models) are owned by us or our licensors and are protected by applicable laws.</li>
+                    <li>Subject to your compliance with these Terms, we grant you a personal, revocable, non-transferable, non-exclusive license to install and use the App on your mobile device.</li>
+                    <li>You may not reverse engineer, decompile, disassemble, bypass technical protections, or use the App for unlawful purposes without our written permission.</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>6. Your Content</h2>
+                <ol>
+                    <li>You retain rights to the images and content you import, edit, save, or share using the App (“User Content”). We do not claim ownership of your User Content merely because you use the App.</li>
+                    <li>You represent and warrant that you have the necessary rights and permissions to use and process the User Content, and that it does not violate law or third-party rights (including privacy and intellectual property).</li>
+                    <li>The App’s core image processing is primarily on-device. Unless you choose a feature that requires uploading (e.g., future cloud sync/sharing), we do not proactively upload your User Content to our servers.</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>7. Prohibited Conduct</h2>
+                <p>You agree not to:</p>
+                <ol>
+                    <li>Violate any applicable law, regulation, or public order and morals;</li>
+                    <li>Infringe or violate others’ intellectual property, portrait rights, reputation, or privacy;</li>
+                    <li>Use the App to create or distribute illegal or harmful content;</li>
+                    <li>Interfere with or disrupt the App by hacking, injecting code, scraping, automation abuse, or similar means;</li>
+                    <li>Circumvent paywalls, ad mechanisms, or obtain benefits through improper means;</li>
+                    <li>Engage in any other conduct we reasonably deem inappropriate.</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>8. Paid Features, Subscriptions, and Refunds (If Applicable)</h2>
+                <ol>
+                    <li>The App may offer one-time purchases, tool packs, subscriptions, and ad removal (as shown in-app).</li>
+                    <li>Purchases/subscriptions are typically handled by the app store (e.g., Apple App Store / Google Play). Pricing, billing, subscription cycles, and auto-renewal rules are governed by the store and the in-app disclosures.</li>
+                    <li>If you subscribe with auto-renewal, you can manage or cancel it through your app store subscription settings.</li>
+                    <li>Refunds are generally processed under the app store’s policies. We may provide reasonable assistance but cannot guarantee a successful refund.</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>9. Third-Party Services and Links</h2>
+                <p>The App may include third-party SDKs/services or links (e.g., ads, analytics, payments/subscriptions, support). These are operated by third parties and subject to their own terms and privacy policies. To the extent permitted by law, we are not responsible for third-party services.</p>
+
+                <hr class="doc-divider">
+
+                <h2>10. Disclaimer</h2>
+                <ol>
+                    <li>The App is provided on an “as is” and “as available” basis. We strive to keep it stable and secure but do not guarantee uninterrupted, error-free service or that it will meet all your requirements.</li>
+                    <li>Processing results may vary based on device performance, OS version, image quality, and parameter choices. You use the App at your own risk.</li>
+                    <li>To the maximum extent permitted by law, we disclaim liability for indirect, incidental, or consequential damages, including data loss or lost profits.</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>11. Limitation of Liability</h2>
+                <p>To the maximum extent permitted by law, our total liability for any claim arising out of or relating to the App or these Terms will not exceed the amount you paid to us for the relevant paid feature (if any). Some jurisdictions do not allow certain limitations; in that case, these limitations may not apply to you.</p>
+
+                <hr class="doc-divider">
+
+                <h2>12. Indemnification</h2>
+                <p>You agree to indemnify and hold us harmless from claims, liabilities, damages, losses, and expenses (including reasonable attorneys’ fees) arising from your violation of these Terms, unlawful use of the App, or infringement of third-party rights.</p>
+
+                <hr class="doc-divider">
+
+                <h2>13. Termination</h2>
+                <ol>
+                    <li>If you violate these Terms or pose risks, we may restrict features, suspend, or terminate access to the Service to the extent reasonably necessary.</li>
+                    <li>You may stop using the App and uninstall it at any time.</li>
+                    <li>Provisions that by their nature should survive termination (e.g., IP, disclaimers, limitation of liability, dispute resolution) will survive.</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>14. Governing Law and Dispute Resolution</h2>
+                <ol>
+                    <li>These Terms are governed by mandatory laws applicable in your jurisdiction. Where permitted and if no mandatory rule applies, the laws of the People’s Republic of China (excluding conflict-of-law rules) apply.</li>
+                    <li>Disputes should first be resolved through good-faith negotiation. If negotiation fails, disputes may be submitted to a court of competent jurisdiction at our principal place of business/residence, to the extent permitted by law.</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>15. Contact Us</h2>
+                <p>If you have questions about these Terms, contact us:</p>
+                <ul>
+                    <li>Email: support@wisepic.app (example; please refer to the App for the current contact)</li>
+                </ul>
+            </div>
 
             <a href="index.html" class="back-to-home" data-i18n="terms.backToHome">← 返回首页</a>
         </div>

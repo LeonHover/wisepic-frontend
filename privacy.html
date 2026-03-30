@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -196,12 +196,47 @@
         }
 
         .highlight {
-            background-color: #1A1A1E;
+            background-color: rgba(23, 26, 33, 0.55);
             padding: 20px;
             border-radius: 10px;
             margin: 25px 0;
             border: 1px solid #2A2A2E;
             border-left: 4px solid #32D583;
+        }
+
+        .highlight p {
+            margin-bottom: 0;
+            color: #CCCCCC;
+        }
+
+        .highlight strong {
+            color: #FAFAF9;
+        }
+
+        .legal-doc {
+            display: none;
+        }
+
+        html[lang="zh-CN"] .legal-doc--zh,
+        html[lang="en"] .legal-doc--en {
+            display: block;
+        }
+
+        .doc-divider {
+            border: 0;
+            border-top: 1px solid #2A2A2E;
+            margin: 2rem 0;
+        }
+
+        .legal-doc a {
+            color: #32D583;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .legal-doc a:hover {
+            color: #28C173;
+            text-decoration: underline;
         }
 
         /* 页脚 */
@@ -345,73 +380,293 @@
     <!-- 主内容 -->
     <div class="container">
         <div class="content">
-            <h1 data-i18n="privacy.pageTitle">WisePic 隐私政策</h1>
-            <p class="last-updated">最后更新日期：【请填写】</p>
+            <h1 data-i18n="privacy.pageTitle">WisePic Privacy Policy</h1>
 
-            <div class="highlight">
-                <p><strong>重要提示：</strong>我们非常重视您的隐私。本政策描述了 WisePic 如何收集、使用、存储和保护您的个人信息。请仔细阅读，以了解我们对您个人信息的处理方式。</p>
+            <div class="legal-doc legal-doc--zh">
+                <p class="last-updated">生效日期：2026-03-31<br>更新日期：2026-03-31</p>
+
+                <p>欢迎您使用 WisePic（wisepic/慧图大师，以下简称“本应用”或“我们”）。我们非常重视用户的个人信息与隐私保护。本《隐私政策》（以下简称“本政策”）将向您说明：我们如何收集、使用、存储、共享与保护您的个人信息，以及您如何行使相关权利。</p>
+                <p>如您不同意本政策的任何内容，请停止使用本应用并卸载；当您继续使用本应用，即表示您已充分阅读、理解并同意本政策。</p>
+
+                <div class="highlight">
+                    <p><strong>重要提示：</strong>本应用的核心图片编辑能力以<strong>本地处理</strong>为主。除非您主动触发需要联网的功能（例如广告、统计、购买校验、检查更新、在线客服/反馈等），否则我们不会主动将您选择的照片/图片上传至我们的服务器。</p>
+                </div>
+
+                <hr class="doc-divider">
+
+                <h2>1. 适用范围</h2>
+                <p>本政策适用于您在移动端（Android/iOS 等）使用本应用提供的产品与服务，包括但不限于图片压缩、格式转换、裁剪、拼接、背景移除、EXIF 信息查看等功能。</p>
+                <p>如未来我们提供登录、云同步、在线模板/素材、社区分享等需要上传内容的功能，我们将通过弹窗、页面提示或更新本政策的方式<strong>再次告知并征得您的明示同意</strong>。</p>
+
+                <hr class="doc-divider">
+
+                <h2>2. 我们可能收集的个人信息</h2>
+                <p>我们遵循“最小必要”原则，仅在实现功能或履行法定义务所需的范围内处理信息。根据您使用的功能不同，我们可能处理以下信息：</p>
+
+                <h3>2.1 您主动提供的信息</h3>
+                <ol>
+                    <li>
+                        <p><strong>您选择导入的图片/照片及其编辑内容</strong></p>
+                        <ul>
+                            <li>用途：用于完成您选择的图片处理操作。</li>
+                            <li>处理方式：默认在您的设备本地进行处理与保存。</li>
+                            <li>说明：我们不会因为提供本地编辑功能而主动将图片内容上传至我们的服务器。</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><strong>反馈与客服信息（如您主动提交）</strong></p>
+                        <ul>
+                            <li>可能包含：您填写的文字描述、联系方式（如邮箱/手机号，若您选择提供）、截图、日志文件等。</li>
+                            <li>用途：定位问题、处理投诉与建议、改善产品体验。</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>2.2 我们在您使用过程中自动收集的信息</h3>
+                <p>为保障运行安全、进行必要的故障分析、统计功能使用情况或提供广告与购买能力，我们可能自动收集以下信息（通常为设备与使用信息，不直接识别您的身份）：</p>
+                <ul>
+                    <li><strong>设备信息</strong>：设备型号、操作系统版本、语言/时区、应用版本、屏幕分辨率等；</li>
+                    <li><strong>网络信息</strong>：网络类型、运营商信息、IP 地址（可能被第三方服务提供方收集）；</li>
+                    <li><strong>日志信息</strong>：崩溃信息、错误堆栈、性能数据、功能点击/停留时长等；</li>
+                    <li><strong>标识符信息</strong>：如广告标识符（AAID/IDFA）、设备标识符（在法律允许范围内）等，用于广告投放、归因、反作弊与统计分析。</li>
+                </ul>
+
+                <h3>2.3 权限与本地存储</h3>
+                <p>本应用可能在您授权后使用以下权限（不同系统/版本显示名称可能不同）：</p>
+                <ul>
+                    <li><strong>读取/访问照片与媒体文件（相册/存储）</strong>：用于导入图片进行处理、保存处理结果；</li>
+                    <li><strong>相机（如您使用拍摄导入）</strong>：用于拍照并直接编辑；</li>
+                    <li><strong>网络访问</strong>：用于展示广告、购买校验、错误上报、检查更新、打开帮助页面等；</li>
+                    <li><strong>通知权限（如我们提供消息提醒）</strong>：用于向您发送必要的服务通知（可在系统设置中关闭）。</li>
+                </ul>
+                <p>我们会将必要的配置与缓存数据保存在您的设备本地（例如最近使用的参数、临时文件）。您可通过系统设置清理缓存或卸载应用来删除本地数据。</p>
+
+                <hr class="doc-divider">
+
+                <h2>3. 我们如何使用个人信息</h2>
+                <p>我们可能将收集到的信息用于：</p>
+                <ol>
+                    <li>提供并维护本应用的核心功能（导入、处理、导出、分享等）；</li>
+                    <li>实现购买与订阅（校验购买状态、提供权益）；</li>
+                    <li>进行安全保障（反作弊、防滥用、风险控制）；</li>
+                    <li>故障排查与性能优化（崩溃分析、质量改进）；</li>
+                    <li>统计与分析（了解功能受欢迎程度，改进产品与体验）；</li>
+                    <li>展示广告或进行个性化推荐（如我们提供广告版服务；具体以应用内展示为准）；</li>
+                    <li>履行法律法规要求或响应监管/司法机关的要求。</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>4. 我们如何共享、转让、公开披露个人信息</h2>
+                <h3>4.1 共享</h3>
+                <p>我们不会向无关第三方出售您的个人信息。仅在以下情形，我们可能共享必要信息：</p>
+                <ol>
+                    <li>
+                        <p><strong>第三方服务提供商</strong></p>
+                        <p>为实现广告、统计分析、崩溃监控、支付与订阅、客服反馈等能力，我们可能接入第三方 SDK/服务。该等第三方可能在其服务范围内处理设备信息、标识符、日志等。我们会要求其采取不低于本政策的保护措施，并仅为实现服务目的处理信息。</p>
+                        <ul>
+                            <li>常见类别示例：广告服务、统计分析、崩溃与性能监控、支付/订阅平台（如应用商店）、客服工单系统等。</li>
+                            <li>说明：实际接入的第三方以您安装版本的“关于/隐私清单/第三方信息共享清单”（如有）或相关提示为准。您也可在本站查阅《<a href="third-party.html">第三方 SDK 列表</a>》（仅供参考）。</li>
+                        </ul>
+                    </li>
+                    <li><p><strong>依法合规要求</strong></p><p>在法律法规规定、诉讼争议解决、行政/司法机关依法提出要求等情况下，我们可能披露必要信息。</p></li>
+                    <li><p><strong>保护合法权益</strong></p><p>为保护您、其他用户或我们的合法权益（例如防止欺诈、处理安全事件等），在必要范围内共享或披露信息。</p></li>
+                </ol>
+
+                <h3>4.2 转让</h3>
+                <p>如发生合并、收购、资产转让或类似交易，个人信息可能作为交易的一部分被转移。我们会在转移前以合理方式通知您，并要求受让方继续受本政策约束。</p>
+
+                <h3>4.3 公开披露</h3>
+                <p>除非获得您的单独同意或法律法规另有规定，我们不会公开披露您的个人信息。</p>
+
+                <hr class="doc-divider">
+
+                <h2>5. 信息存储与跨境传输</h2>
+                <ol>
+                    <li><strong>存储方式</strong>：本应用以本地处理为主；如涉及联网服务，相关日志与必要业务数据可能由我们或第三方服务提供商在其服务器上存储。</li>
+                    <li><strong>存储期限</strong>：我们仅在实现目的所必需的最短期限内保存信息；法律法规另有要求的，从其规定。</li>
+                    <li><strong>跨境传输</strong>：如因第三方服务提供商的服务器部署导致信息跨境传输，我们将依法采取必要措施（例如签署数据处理协议、进行影响评估、采取安全加密等）。您可通过本政策末尾联系方式向我们咨询。</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>6. 信息安全</h2>
+                <p>我们采取合理可行的安全措施保护您的信息（例如访问控制、最小权限、传输加密、日志审计等）。但请您理解：任何传输与存储方式都无法做到绝对安全，我们无法保证信息的绝对安全。</p>
+                <p>若发生个人信息安全事件，我们将依法及时告知您并采取补救措施。</p>
+
+                <hr class="doc-divider">
+
+                <h2>7. 您的权利</h2>
+                <p>在符合法律法规的前提下，您对个人信息享有相应权利，包括：</p>
+                <ul>
+                    <li><strong>访问与更正</strong>：您可在应用内查看并修改部分设置与信息（如有）；</li>
+                    <li><strong>删除</strong>：如信息主要存储在本地，您可通过清理缓存/卸载应用删除；如我们或第三方持有您的相关信息，您可联系我们提出删除请求；</li>
+                    <li><strong>撤回同意</strong>：您可在系统权限管理中关闭相应权限，或在应用内关闭相关功能开关（如有）；撤回后不影响撤回前基于同意已进行的处理；</li>
+                    <li><strong>注销/停止使用</strong>：您可停止使用并卸载应用；如未来提供账号体系，您可申请注销账号（如有）；</li>
+                    <li><strong>投诉与反馈</strong>：您可通过本政策“联系我们”渠道提出意见与投诉。</li>
+                </ul>
+
+                <hr class="doc-divider">
+
+                <h2>8. 未成年人保护</h2>
+                <p>本应用面向一般用户提供服务。若您为未满 <strong>14 周岁</strong> 的未成年人，请在监护人同意与指导下使用本应用，并在监护人帮助下阅读本政策。我们不会在明知的情况下收集未成年人不必要的个人信息；如监护人发现我们可能在未获同意的情况下处理了未成年人的个人信息，可联系我们处理。</p>
+
+                <hr class="doc-divider">
+
+                <h2>9. 本政策的变更</h2>
+                <p>我们可能适时修订本政策。更新后的本政策将以应用内公告、弹窗提示或在相关页面发布等方式告知您，并在标注的生效日期起生效。若变更属于重大变更，我们将依法以更显著方式提示并在需要时征得您的同意。</p>
+
+                <hr class="doc-divider">
+
+                <h2>10. 联系我们</h2>
+                <p>如您对本政策有任何疑问、意见或请求，可通过以下方式联系我们：</p>
+                <ul>
+                    <li>邮箱：support@wisepic.app（示例；请以应用内展示为准）</li>
+                </ul>
             </div>
 
-            <p>欢迎使用 WisePic 图片编辑软件（以下简称"本软件"）。我们深知个人信息对您的重要性，并会尽全力保护您的个人信息安全可靠。我们致力于维持您对我们的信任，恪守以下原则保护您的个人信息：权责一致原则、目的明确原则、选择同意原则、最少够用原则、公开透明原则、确保安全原则。</p>
+            <div class="legal-doc legal-doc--en">
+                <p class="last-updated">Effective Date: 2026-03-31<br>Last Updated: 2026-03-31</p>
 
-            <h2>1. 我们收集的信息</h2>
-            <p>1.1 <strong>设备信息：</strong>为了提供基本服务，我们可能会收集您的设备型号、操作系统版本、唯一设备标识符（如 Android ID）、IP 地址等信息。</p>
-            <p>1.2 <strong>使用数据：</strong>我们可能会收集您使用本软件时的操作日志，包括功能使用频率、崩溃报告、性能数据等，以改进软件体验。</p>
-            <p>1.3 <strong>图片数据：</strong>您使用本软件编辑的图片仅存储在您的设备本地，我们不会主动上传或存储您的图片。部分功能（如格式转换）可能需要在设备本地处理图片，但不会将图片传输到我们的服务器。</p>
-            <p>1.4 <strong>位置信息：</strong>我们不会收集您的精确位置信息。</p>
+                <p>Welcome to WisePic (wisepic, the “App”, “we”, “us”, or “our”). We value your privacy and are committed to protecting your personal information. This Privacy Policy (the “Policy”) explains how we collect, use, store, share, and protect information when you use our mobile image editing services.</p>
+                <p>If you do not agree with any part of this Policy, please stop using the App and uninstall it. By continuing to use the App, you acknowledge that you have read, understood, and agreed to this Policy.</p>
 
-            <h2>2. 我们如何使用信息</h2>
-            <p>2.1 我们可能将收集的信息用于以下目的：</p>
-            <ul>
-                <li>提供、维护和改进本软件的功能和服务；</li>
-                <li>分析使用情况，优化用户体验；</li>
-                <li>诊断和解决技术问题；</li>
-                <li>防止欺诈和滥用行为；</li>
-                <li>遵守法律法规的要求。</li>
-            </ul>
-            <p>2.2 我们不会将您的个人信息用于任何商业营销目的，也不会向第三方出售您的个人信息。</p>
+                <div class="highlight">
+                    <p><strong>Important:</strong> The App’s core image editing features are primarily processed <strong>on-device (locally)</strong>. Unless you proactively use a feature that requires network access (such as ads, analytics, purchase/subscription verification, update checks, or support/feedback), we do not upload the photos/images you select to our servers.</p>
+                </div>
 
-            <h2>3. 信息的存储与保护</h2>
-            <p>3.1 我们采用合理的安全措施保护您的个人信息，防止未经授权的访问、使用、修改或泄露。</p>
-            <p>3.2 您的个人信息将存储在中国境内的服务器上，并按照相关法律法规规定的期限保存。</p>
-            <p>3.3 尽管我们已采取合理的安全措施，但任何互联网传输或电子存储方法都无法保证100%安全。我们无法保证信息的绝对安全。</p>
+                <hr class="doc-divider">
 
-            <h2>4. 信息的共享与披露</h2>
-            <p>4.1 我们不会与任何第三方共享您的个人信息，除非：</p>
-            <ul>
-                <li>获得您的明确同意；</li>
-                <li>根据法律法规或政府机关的要求；</li>
-                <li>为保护我们或第三方的合法权益；</li>
-                <li>为履行本软件的服务条款或处理纠纷。</li>
-            </ul>
-            <p>4.2 我们可能使用第三方服务提供商协助提供服务（如数据分析、崩溃报告），这些提供商会根据合同约定处理信息，且不得用于其他目的。</p>
+                <h2>1. Scope</h2>
+                <p>This Policy applies to your use of the App on mobile devices (e.g., Android and iOS), including features such as image compression, format conversion, cropping, collage, background removal, and EXIF viewing.</p>
+                <p>If we later introduce features that require uploading content (e.g., account login, cloud sync, online templates/assets, community sharing), we will provide additional notice and obtain your explicit consent where required.</p>
 
-            <h2>5. 第三方服务</h2>
-            <p>5.1 本软件可能包含第三方服务（如广告、分析工具），这些服务有自己的隐私政策。我们建议您阅读这些政策。</p>
-            <p>5.2 我们不对第三方服务的隐私实践负责。关于第三方SDK的详细信息，请参阅《<a href="third-party.html">第三方SDK列表</a>》。</p>
+                <hr class="doc-divider">
 
-            <h2>6. 您的权利</h2>
-            <p>6.1 您有权：</p>
-            <ul>
-                <li>了解我们如何处理您的个人信息；</li>
-                <li>要求访问、更正或删除您的个人信息；</li>
-                <li>撤回之前给予的同意；</li>
-                <li>投诉或举报个人信息处理行为。</li>
-            </ul>
-            <p>6.2 如需行使上述权利，请通过本政策末尾的联系方式与我们联系。</p>
+                <h2>2. Information We May Collect</h2>
+                <p>We follow a “minimum necessary” principle and process information only as needed to provide the service or comply with legal obligations. Depending on how you use the App, we may process the following:</p>
 
-            <h2>7. 未成年人保护</h2>
-            <p>7.1 我们非常重视未成年人的个人信息保护。如果您是未满18周岁的未成年人，请在父母或监护人的指导下使用本软件。</p>
-            <p>7.2 如果我们发现自己在未获得父母或监护人同意的情况下收集了未成年人的个人信息，会设法尽快删除相关信息。</p>
+                <h3>2.1 Information You Provide</h3>
+                <ol>
+                    <li>
+                        <p><strong>Images/Photos You Import and Your Edits</strong></p>
+                        <ul>
+                            <li>Purpose: To perform the processing actions you choose.</li>
+                            <li>Processing method: By default, processing and saving happen on your device.</li>
+                            <li>Note: We do not upload your image content to our servers solely to provide local editing features.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><strong>Support/Feedback Content (If You Submit It)</strong></p>
+                        <ul>
+                            <li>May include: your message, contact details you choose to provide (e.g., email/phone), screenshots, and diagnostic logs.</li>
+                            <li>Purpose: troubleshooting, responding to requests, improving product quality.</li>
+                        </ul>
+                    </li>
+                </ol>
 
-            <h2>8. 政策的变更</h2>
-            <p>8.1 我们可能会不时更新本政策。更新后的政策将在本软件或网站上公布，重要变更会通过适当方式通知您。</p>
-            <p>8.2 您继续使用本软件即表示接受更新后的政策。</p>
+                <h3>2.2 Information Collected Automatically</h3>
+                <p>To maintain security, diagnose issues, analyze usage, provide ads, or verify purchases, we may automatically collect device and usage information (generally not directly identifying you):</p>
+                <ul>
+                    <li><strong>Device information</strong>: device model, OS version, language/time zone, app version, screen resolution;</li>
+                    <li><strong>Network information</strong>: network type, carrier, IP address (may be collected by third-party providers);</li>
+                    <li><strong>Log data</strong>: crash reports, error stacks, performance metrics, feature taps and session duration;</li>
+                    <li><strong>Identifiers</strong>: advertising identifiers (AAID/IDFA) and other device identifiers where legally permitted, for advertising, attribution, anti-fraud, and analytics.</li>
+                </ul>
 
-            <h2>9. 联系我们</h2>
-            <p>如果您对本隐私政策有任何疑问、意见或建议，请通过以下方式联系我们：</p>
-            <p>邮箱：【请填写】</p>
-            <p>我们将在收到您的请求后15个工作日内回复。</p>
+                <h3>2.3 Permissions and Local Storage</h3>
+                <p>With your authorization, the App may request permissions (names may vary by OS/version):</p>
+                <ul>
+                    <li><strong>Photos/Media/Storage access</strong>: to import images and save results;</li>
+                    <li><strong>Camera (if you choose to capture/import)</strong>: to take a photo and edit it;</li>
+                    <li><strong>Network access</strong>: to display ads, verify purchases/subscriptions, report errors, check for updates, open help pages;</li>
+                    <li><strong>Notifications (if we provide reminders/alerts)</strong>: for essential service notices (you can disable in system settings).</li>
+                </ul>
+                <p>The App may store necessary settings and cache files locally on your device (e.g., recently used parameters, temporary files). You can remove local data by clearing the App’s cache or uninstalling the App.</p>
+
+                <hr class="doc-divider">
+
+                <h2>3. How We Use Information</h2>
+                <p>We may use the collected information to:</p>
+                <ol>
+                    <li>Provide, maintain, and operate core App features (import, process, export, share);</li>
+                    <li>Enable purchases and subscriptions (validate entitlements, deliver benefits);</li>
+                    <li>Protect security (anti-fraud, abuse prevention, risk control);</li>
+                    <li>Troubleshoot and improve performance (crash diagnostics, quality improvements);</li>
+                    <li>Analyze usage to improve features and user experience;</li>
+                    <li>Show ads or provide personalized recommendations (if the App includes an ad-supported version; as shown in-App);</li>
+                    <li>Comply with legal obligations or respond to lawful requests.</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>4. Sharing, Transfer, and Public Disclosure</h2>
+                <h3>4.1 Sharing</h3>
+                <p>We do not sell your personal information. We may share limited information only in the following circumstances:</p>
+                <ol>
+                    <li>
+                        <p><strong>Service Providers / Third-Party SDKs</strong></p>
+                        <p>We may integrate third-party services/SDKs for ads, analytics, crash reporting, payments/subscriptions, and support/feedback. These parties may process device information, identifiers, and logs within the scope of providing their services. We require them to protect information and use it only for service purposes.</p>
+                        <ul>
+                            <li>Typical categories: ad services, analytics, crash/performance monitoring, app store payment/subscription platforms, customer support tools.</li>
+                            <li>Note: The actual third parties integrated depend on the version you installed and any in-app disclosures (e.g., “About”, “Privacy”, “Third-Party Sharing List”, where applicable). You may also review our <a href="third-party.html">third-party SDK list</a> on this website (for reference only).</li>
+                        </ul>
+                    </li>
+                    <li><p><strong>Legal Compliance</strong></p><p>We may disclose necessary information to comply with laws, regulations, legal processes, or lawful government requests.</p></li>
+                    <li><p><strong>Protection of Rights and Safety</strong></p><p>We may share information as reasonably necessary to protect users, third parties, or our lawful rights, including preventing fraud and handling security incidents.</p></li>
+                </ol>
+
+                <h3>4.2 Business Transfers</h3>
+                <p>If we are involved in a merger, acquisition, reorganization, or asset sale, information may be transferred as part of that transaction. We will provide notice as required and require the recipient to honor this Policy.</p>
+
+                <h3>4.3 Public Disclosure</h3>
+                <p>We do not publicly disclose your personal information unless we have your separate consent or are required by law.</p>
+
+                <hr class="doc-divider">
+
+                <h2>5. Storage and Cross-Border Transfers</h2>
+                <ol>
+                    <li><strong>Storage</strong>: The App primarily processes images locally. If network-based services are involved, necessary logs and limited business data may be stored by us or by third-party providers on their servers.</li>
+                    <li><strong>Retention</strong>: We retain information only for as long as necessary for the purposes described in this Policy, unless a longer period is required by law.</li>
+                    <li><strong>Cross-border transfers</strong>: If data is transferred internationally due to the infrastructure of third-party providers, we will take appropriate measures as required by applicable law (e.g., contracts, assessments, security controls). You may contact us for more information.</li>
+                </ol>
+
+                <hr class="doc-divider">
+
+                <h2>6. Security</h2>
+                <p>We use reasonable administrative, technical, and physical safeguards (e.g., access controls, least privilege, encryption in transit where applicable, logging). However, no method of transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
+                <p>If a personal information security incident occurs, we will take remedial actions and notify you as required by applicable law.</p>
+
+                <hr class="doc-divider">
+
+                <h2>7. Your Rights</h2>
+                <p>Subject to applicable law, you may have rights to:</p>
+                <ul>
+                    <li><strong>Access and correct</strong> certain settings or information (where available);</li>
+                    <li><strong>Delete</strong> information: for local data, clear cache or uninstall; for data held by us or service providers, contact us to request deletion where applicable;</li>
+                    <li><strong>Withdraw consent</strong>: disable permissions in system settings or turn off related in-app toggles (where available); withdrawal does not affect prior lawful processing;</li>
+                    <li><strong>Stop using the App</strong>: you may stop using and uninstall at any time; if accounts are introduced later, you may request account deletion (where available);</li>
+                    <li><strong>Complain / request support</strong> via the contact methods below.</li>
+                </ul>
+
+                <hr class="doc-divider">
+
+                <h2>8. Children’s Privacy</h2>
+                <p>The App is intended for general audiences. If you are under the age of 14, please use the App with a parent/guardian’s consent and guidance. We do not knowingly collect more information than necessary from children. If a parent/guardian believes we may have collected a child’s information without consent, please contact us.</p>
+
+                <hr class="doc-divider">
+
+                <h2>9. Changes to This Policy</h2>
+                <p>We may update this Policy from time to time. We will provide notice through in-app announcements, pop-ups, or posting the updated Policy. The updated Policy will take effect on the stated effective date. For material changes, we will provide more prominent notice and obtain consent where required.</p>
+
+                <hr class="doc-divider">
+
+                <h2>10. Contact Us</h2>
+                <p>If you have questions, comments, or requests about this Policy, please contact us:</p>
+                <ul>
+                    <li>Email: support@wisepic.app (example; please refer to the App for the current contact)</li>
+                </ul>
+            </div>
 
             <a href="index.html" class="back-to-home" data-i18n="privacy.backToHome">← 返回首页</a>
         </div>

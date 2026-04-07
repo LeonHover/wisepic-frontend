@@ -8,7 +8,7 @@
     "privacy": "隐私政策",
     "thirdParty": "第三方SDK",
     "contact": "联系我们",
-    "contactEmail": "contact@wisepic.com",
+    "contactEmail": "xlingdev@gmail.com",
     "copyright": "© 2026 WisePic. 保留所有权利。",
     "language": "语言",
     "chinese": "中文",
@@ -35,7 +35,7 @@
     "downloadText": "目前支持 Android 平台，iOS 版本即将上线",
     "googlePlay": "Google Play 下载",
     "directDownload": "直接下载 APK",
-    "downloadNote": "*下载链接即将公布，敬请期待",
+    "downloadNote": "*点击后将在 Android 设备优先打开应用商店详情页。",
     "footerTagline": "让图片编辑变得更简单、更智能。",
     "quickLinks": "快速链接",
     "legal": "法律条款",
@@ -55,6 +55,23 @@
   "thirdParty": {
     "title": "第三方SDK",
     "pageTitle": "第三方 SDK 列表",
+    "backToHome": "← 返回首页"
+  },
+  "dataDeletion": {
+    "title": "Google 商店数据删除",
+    "pageTitle": "Google 商店数据删除",
+    "subtitle": "本页面用于 Google Play 数据删除合规说明，用户可通过联系邮箱提交删除申请",
+    "section1Title": "1. 删除方式",
+    "methodPrefix": "若您希望删除与 WisePic 相关的个人数据，请通过邮箱发送删除申请至：",
+    "section2Title": "2. 申请时建议提供的信息",
+    "item1": "用于联系您的邮箱地址；",
+    "item2": "应用内用户标识（如有）；",
+    "item3": "需要删除的数据范围说明（如账号信息、使用记录等）。",
+    "section3Title": "3. 处理时效",
+    "processing": "我们将在收到您的删除申请后尽快进行身份与范围核验，并在 14 个工作日内通过邮件回复处理进度或处理结果。",
+    "section4Title": "4. 补充说明",
+    "note1": "设备本地图片、缓存和导出文件，您可在设备中自行删除。",
+    "note2": "如法律法规另有规定，或为履行法定义务需要保留部分信息，我们将在法定范围内处理并向您说明。",
     "backToHome": "← 返回首页"
   }
 }

@@ -214,6 +214,8 @@ const I18n = {
             titleKey = 'privacy.pageTitle';
         } else if (path.endsWith('third-party.html')) {
             titleKey = 'thirdParty.pageTitle';
+        } else if (path.endsWith('google-data-deletion.html')) {
+            titleKey = 'dataDeletion.pageTitle';
         }
 
         if (titleKey) {

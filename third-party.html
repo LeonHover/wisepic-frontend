@@ -215,6 +215,14 @@
             font-style: italic;
         }
 
+        .policy-lang-content {
+            display: none;
+        }
+
+        .policy-lang-content.active {
+            display: block;
+        }
+
         /* 页脚 */
         footer {
             background-color: #1A1A1E;
@@ -380,61 +388,106 @@
     <div class="container">
         <div class="content">
             <h1 data-i18n="thirdParty.pageTitle">第三方 SDK 列表</h1>
-            <p class="intro">为保障 WisePic 相关功能的实现与应用安全稳定的运行，我们可能会接入由第三方提供的软件开发包（SDK）。我们会对合作方获取信息的软件工具开发包（SDK）进行严格的安全评估，以保护您的个人信息安全。以下是我们在 App 中可能集成的第三方 SDK 详情，请知悉。</p>
 
-            <h2>SDK 列表说明</h2>
-            <p>下表列出了当前版本 WisePic 可能集成的第三方 SDK。我们会根据功能需要更新此列表，建议您定期查阅。</p>
+            <div class="policy-lang-content lang-zh active">
+                <p class="intro">为保障 WisePic 的核心功能实现与服务稳定运行，我们会接入部分第三方 SDK 或开源组件。我们会对接入组件进行安全评估，并要求其遵守适用法律法规与隐私保护要求。以下为当前版本应用中使用的第三方 SDK/组件说明。</p>
 
-            <table class="sdk-table">
-                <thead>
-                    <tr>
-                        <th>SDK 名称</th>
-                        <th>第三方公司</th>
-                        <th>使用目的</th>
-                        <th>收集的信息</th>
-                        <th>隐私政策链接</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>【请填写 SDK 名称】</td>
-                        <td>【请填写公司名称】</td>
-                        <td>【请填写使用目的，如：崩溃分析、性能监控、广告投放等】</td>
-                        <td>【请填写收集的信息类型，如：设备信息、使用数据等】</td>
-                        <td><a href="#" target="_blank">【请填写链接】</a></td>
-                    </tr>
-                    <tr>
-                        <td>【请填写 SDK 名称】</td>
-                        <td>【请填写公司名称】</td>
-                        <td>【请填写使用目的】</td>
-                        <td>【请填写收集的信息类型】</td>
-                        <td><a href="#" target="_blank">【请填写链接】</a></td>
-                    </tr>
-                    <tr>
-                        <td>【请填写 SDK 名称】</td>
-                        <td>【请填写公司名称】</td>
-                        <td>【请填写使用目的】</td>
-                        <td>【请填写收集的信息类型】</td>
-                        <td><a href="#" target="_blank">【请填写链接】</a></td>
-                    </tr>
-                    <tr>
-                        <td colspan="5" class="empty-placeholder">* 以上为示例行，实际集成的 SDK 将在应用发布前确定并填写具体信息。</td>
-                    </tr>
-                </tbody>
-            </table>
+                <h2>SDK 列表说明</h2>
+                <p>本页面依据项目依赖与运行时依赖树整理，更新日期：2026-04-07。后续如有新增、替换或移除，我们将同步更新本页内容。</p>
 
-            <h2>关于权限申请</h2>
-            <p>部分 SDK 可能需要申请系统权限（如存储权限、网络权限等）以正常提供服务。我们会在需要时向您明确提示，并仅在实现功能所必要的范围内申请权限。</p>
+                <table class="sdk-table">
+                    <thead>
+                        <tr>
+                            <th>SDK / 组件名称</th>
+                            <th>提供方</th>
+                            <th>使用目的</th>
+                            <th>可能处理的信息类型</th>
+                            <th>隐私政策 / 项目链接</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Firebase Analytics</td><td>Google LLC</td><td>统计应用运行与功能使用情况，用于产品优化与问题分析。</td><td>设备与应用标识符、应用交互事件、设备基础信息。</td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></td></tr>
+                        <tr><td>MMKV</td><td>Tencent</td><td>本地高性能键值存储，用于保存应用配置与状态。</td><td>仅处理并存储应用写入的本地数据。</td><td><a href="https://github.com/Tencent/MMKV" target="_blank" rel="noopener noreferrer">https://github.com/Tencent/MMKV</a></td></tr>
+                        <tr><td>Coil</td><td>Coil Contributors</td><td>图片加载、解码与缓存。</td><td>图片 URL、缓存数据及网络侧信息。</td><td><a href="https://github.com/coil-kt/coil" target="_blank" rel="noopener noreferrer">https://github.com/coil-kt/coil</a></td></tr>
+                        <tr><td>Glide</td><td>Glide Contributors</td><td>图片加载、转换与缓存。</td><td>图片 URL、缓存数据及网络侧信息。</td><td><a href="https://github.com/bumptech/glide" target="_blank" rel="noopener noreferrer">https://github.com/bumptech/glide</a></td></tr>
+                        <tr><td>OkHttp（含 Okio）</td><td>Square, Inc.</td><td>网络通信能力（传递依赖引入）。</td><td>请求地址、IP、网络连接与传输数据。</td><td><a href="https://square.github.io/okhttp/" target="_blank" rel="noopener noreferrer">https://square.github.io/okhttp/</a></td></tr>
+                        <tr><td>Banner</td><td>Banner Contributors</td><td>轮播图展示组件。</td><td>不主动采集个人信息。</td><td><a href="https://github.com/youth5201314/banner" target="_blank" rel="noopener noreferrer">https://github.com/youth5201314/banner</a></td></tr>
+                        <tr><td>StateLayout</td><td>StateLayout Contributors</td><td>页面状态展示组件。</td><td>不主动采集个人信息。</td><td><a href="https://github.com/liangjingkanji/StateLayout" target="_blank" rel="noopener noreferrer">https://github.com/liangjingkanji/StateLayout</a></td></tr>
+                        <tr><td>File Core</td><td>File Core Contributors</td><td>文件读写与管理能力。</td><td>文件路径、元数据和文件内容。</td><td><a href="https://github.com/javakam/FileOperator" target="_blank" rel="noopener noreferrer">https://github.com/javakam/FileOperator</a></td></tr>
+                        <tr><td>RealtimeBlurView</td><td>RealtimeBlurView Contributors</td><td>实时模糊视觉效果。</td><td>不主动采集个人信息。</td><td><a href="https://github.com/limuyang2/RealtimeBlurView" target="_blank" rel="noopener noreferrer">https://github.com/limuyang2/RealtimeBlurView</a></td></tr>
+                        <tr><td>Subsampling Scale Image View</td><td>Subsampling Contributors</td><td>大图缩放与分块显示。</td><td>不主动采集个人信息。</td><td><a href="https://github.com/davemorrissey/subsampling-scale-image-view" target="_blank" rel="noopener noreferrer">https://github.com/davemorrissey/subsampling-scale-image-view</a></td></tr>
+                        <tr><td>Compressor</td><td>Zelory</td><td>图片压缩处理。</td><td>图片文件及元数据（尺寸、EXIF）。</td><td><a href="https://github.com/zetbaitsu/Compressor" target="_blank" rel="noopener noreferrer">https://github.com/zetbaitsu/Compressor</a></td></tr>
+                        <tr><td>RenderScript Toolkit</td><td>Toolkit Contributors</td><td>图像滤镜与处理能力。</td><td>不主动采集个人信息。</td><td><a href="https://github.com/android/renderscript-samples/tree/main/RenderScriptToolkit" target="_blank" rel="noopener noreferrer">https://github.com/android/renderscript-samples/tree/main/RenderScriptToolkit</a></td></tr>
+                        <tr><td>GPUImage（开源第三方 SDK）</td><td>CyberAgent / Contributors</td><td>图像滤镜处理。</td><td>仅处理应用内图像数据。</td><td><a href="https://github.com/CyberAgent/android-gpuimage" target="_blank" rel="noopener noreferrer">https://github.com/CyberAgent/android-gpuimage</a></td></tr>
+                        <tr><td>uCrop（开源第三方 SDK）</td><td>Yalantis / Contributors</td><td>图片裁剪。</td><td>仅处理应用内图像数据。</td><td><a href="https://github.com/Yalantis/uCrop" target="_blank" rel="noopener noreferrer">https://github.com/Yalantis/uCrop</a></td></tr>
+                        <tr><td>PhotoLibrary（开源第三方 SDK）</td><td>PhotoLibrary Contributors</td><td>相册浏览与图片选择。</td><td>本地媒体文件信息与缩略图数据。</td><td><a href="https://github.com/limuyang2/PhotoLibrary" target="_blank" rel="noopener noreferrer">https://github.com/limuyang2/PhotoLibrary</a></td></tr>
+                        <tr><td>ImageCompressor（开源第三方 SDK）</td><td>Compressor Contributors</td><td>图片压缩能力实现与封装。</td><td>图片文件及元数据。</td><td><a href="https://github.com/zetbaitsu/Compressor" target="_blank" rel="noopener noreferrer">https://github.com/zetbaitsu/Compressor</a></td></tr>
+                    </tbody>
+                </table>
 
-            <h2>信息共享原则</h2>
-            <p>我们会要求第三方 SDK 遵守相关法律法规，采取适当的安全措施保护您的个人信息。我们不会允许第三方 SDK 将您的个人信息用于其他任何用途。</p>
+                <h2>关于权限申请</h2>
+                <p>部分 SDK 或组件在实现功能时可能依赖系统权限（如网络访问、读取媒体文件等）。我们仅会在实现对应功能所必需的范围内申请权限，并在触发时向您说明用途。</p>
 
-            <h2>变更与更新</h2>
-            <p>我们将根据业务调整或第三方 SDK 的变化更新此列表。如果您对特定 SDK 有疑问，请通过以下联系方式与我们联系。</p>
+                <h2>信息共享原则</h2>
+                <p>我们不会允许第三方 SDK 将个人信息用于与其服务功能无关的目的。对于具有数据处理能力的第三方服务，我们会持续跟踪其合规状态，并在必要时进行替换或下线。</p>
 
-            <h2>联系我们</h2>
-            <p>如果您对本列表或第三方 SDK 的数据处理有任何疑问，请通过以下方式联系我们：</p>
-            <p>邮箱：【请填写】</p>
+                <h2>变更与更新</h2>
+                <p>如因版本升级、功能变更导致 SDK 清单调整，我们会及时更新本页面。建议您在应用更新后定期查阅本页面。</p>
+
+                <h2>联系我们</h2>
+                <p>如果您对本列表或第三方 SDK 的数据处理有疑问，请通过以下方式联系我们：</p>
+                <p>邮箱：xlingdev@gmail.com</p>
+            </div>
+
+            <div class="policy-lang-content lang-en">
+                <p class="intro">To ensure core features and stable operation of WisePic, we integrate selected third-party SDKs and open-source components. We conduct security assessments and require partners to comply with applicable privacy and data protection requirements. The list below describes third-party SDKs/components used in the current version.</p>
+
+                <h2>About This SDK List</h2>
+                <p>This page is generated from project dependencies and runtime dependency trees. Last updated: April 7, 2026. We will update this page when SDKs are added, replaced, or removed.</p>
+
+                <table class="sdk-table">
+                    <thead>
+                        <tr>
+                            <th>SDK / Component</th>
+                            <th>Provider</th>
+                            <th>Purpose</th>
+                            <th>Data Potentially Processed</th>
+                            <th>Privacy Policy / Project Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Firebase Analytics</td><td>Google LLC</td><td>App usage analytics and product optimization.</td><td>App identifiers, interaction events, device basics.</td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></td></tr>
+                        <tr><td>MMKV</td><td>Tencent</td><td>Local key-value storage.</td><td>Locally stored app configuration/state data.</td><td><a href="https://github.com/Tencent/MMKV" target="_blank" rel="noopener noreferrer">https://github.com/Tencent/MMKV</a></td></tr>
+                        <tr><td>Coil</td><td>Coil Contributors</td><td>Image loading/decoding/caching.</td><td>Image URLs, cache data, network-side info.</td><td><a href="https://github.com/coil-kt/coil" target="_blank" rel="noopener noreferrer">https://github.com/coil-kt/coil</a></td></tr>
+                        <tr><td>Glide</td><td>Glide Contributors</td><td>Image loading/transformation/caching.</td><td>Image URLs, cache data, network-side info.</td><td><a href="https://github.com/bumptech/glide" target="_blank" rel="noopener noreferrer">https://github.com/bumptech/glide</a></td></tr>
+                        <tr><td>OkHttp (with Okio)</td><td>Square, Inc.</td><td>Network communication stack.</td><td>Request URLs, IP, connection and payload data.</td><td><a href="https://square.github.io/okhttp/" target="_blank" rel="noopener noreferrer">https://square.github.io/okhttp/</a></td></tr>
+                        <tr><td>Banner</td><td>Banner Contributors</td><td>Carousel UI component.</td><td>No active personal data collection.</td><td><a href="https://github.com/youth5201314/banner" target="_blank" rel="noopener noreferrer">https://github.com/youth5201314/banner</a></td></tr>
+                        <tr><td>StateLayout</td><td>StateLayout Contributors</td><td>UI state rendering component.</td><td>No active personal data collection.</td><td><a href="https://github.com/liangjingkanji/StateLayout" target="_blank" rel="noopener noreferrer">https://github.com/liangjingkanji/StateLayout</a></td></tr>
+                        <tr><td>File Core</td><td>File Core Contributors</td><td>File read/write and management.</td><td>File paths, metadata, and file content.</td><td><a href="https://github.com/javakam/FileOperator" target="_blank" rel="noopener noreferrer">https://github.com/javakam/FileOperator</a></td></tr>
+                        <tr><td>RealtimeBlurView</td><td>RealtimeBlurView Contributors</td><td>Real-time blur visual effect.</td><td>No active personal data collection.</td><td><a href="https://github.com/limuyang2/RealtimeBlurView" target="_blank" rel="noopener noreferrer">https://github.com/limuyang2/RealtimeBlurView</a></td></tr>
+                        <tr><td>Subsampling Scale Image View</td><td>Subsampling Contributors</td><td>Large-image zoom/tiling display.</td><td>No active personal data collection.</td><td><a href="https://github.com/davemorrissey/subsampling-scale-image-view" target="_blank" rel="noopener noreferrer">https://github.com/davemorrissey/subsampling-scale-image-view</a></td></tr>
+                        <tr><td>Compressor</td><td>Zelory</td><td>Image compression.</td><td>Image files and metadata (size, EXIF).</td><td><a href="https://github.com/zetbaitsu/Compressor" target="_blank" rel="noopener noreferrer">https://github.com/zetbaitsu/Compressor</a></td></tr>
+                        <tr><td>RenderScript Toolkit</td><td>Toolkit Contributors</td><td>Image filtering/processing.</td><td>No active personal data collection.</td><td><a href="https://github.com/android/renderscript-samples/tree/main/RenderScriptToolkit" target="_blank" rel="noopener noreferrer">https://github.com/android/renderscript-samples/tree/main/RenderScriptToolkit</a></td></tr>
+                        <tr><td>GPUImage (Open-source Third-party SDK)</td><td>CyberAgent / Contributors</td><td>Image filter processing.</td><td>In-app image data only.</td><td><a href="https://github.com/CyberAgent/android-gpuimage" target="_blank" rel="noopener noreferrer">https://github.com/CyberAgent/android-gpuimage</a></td></tr>
+                        <tr><td>uCrop (Open-source Third-party SDK)</td><td>Yalantis / Contributors</td><td>Image cropping.</td><td>In-app image data only.</td><td><a href="https://github.com/Yalantis/uCrop" target="_blank" rel="noopener noreferrer">https://github.com/Yalantis/uCrop</a></td></tr>
+                        <tr><td>PhotoLibrary (Open-source Third-party SDK)</td><td>PhotoLibrary Contributors</td><td>Gallery browsing and image selection.</td><td>Local media metadata and thumbnails.</td><td><a href="https://github.com/limuyang2/PhotoLibrary" target="_blank" rel="noopener noreferrer">https://github.com/limuyang2/PhotoLibrary</a></td></tr>
+                        <tr><td>ImageCompressor (Open-source Third-party SDK)</td><td>Compressor Contributors</td><td>Image compression implementation.</td><td>Image files and metadata.</td><td><a href="https://github.com/zetbaitsu/Compressor" target="_blank" rel="noopener noreferrer">https://github.com/zetbaitsu/Compressor</a></td></tr>
+                    </tbody>
+                </table>
+
+                <h2>Permission Usage</h2>
+                <p>Some SDKs/components may rely on system permissions (for example, network access or media file access) to provide related features. We request permissions only when necessary and disclose purposes when features are triggered.</p>
+
+                <h2>Data Sharing Principles</h2>
+                <p>We do not allow third-party SDKs to use personal data for purposes unrelated to their service functions. For services with data processing capability, we continuously evaluate compliance and may replace or remove them if needed.</p>
+
+                <h2>Changes and Updates</h2>
+                <p>We will update this list if SDK integrations change due to version upgrades or feature updates. Please review this page regularly after app updates.</p>
+
+                <h2>Contact Us</h2>
+                <p>If you have questions about this SDK list or third-party data processing, contact us:</p>
+                <p>Email: xlingdev@gmail.com</p>
+            </div>
 
             <a href="index.html" class="back-to-home" data-i18n="thirdParty.backToHome">← 返回首页</a>
         </div>
@@ -445,36 +498,36 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>WisePic</h3>
-                    <p style="color: #CCCCCC;">让图片编辑变得更简单、更智能。</p>
+                    <h3 data-i18n="common.siteName">WisePic</h3>
+                    <p style="color: #CCCCCC;" data-i18n="index.footerTagline">让图片编辑变得更简单、更智能。</p>
                 </div>
                 <div class="footer-column">
-                    <h3>快速链接</h3>
+                    <h3 data-i18n="index.quickLinks">快速链接</h3>
                     <ul>
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="index.html#features">功能</a></li>
-                        <li><a href="index.html#download">下载</a></li>
+                        <li><a href="index.html" data-i18n="common.home">首页</a></li>
+                        <li><a href="index.html#features" data-i18n="common.features">功能</a></li>
+                        <li><a href="index.html#download" data-i18n="common.download">下载</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>法律条款</h3>
+                    <h3 data-i18n="index.legal">法律条款</h3>
                     <ul>
-                        <li><a href="terms.html">用户协议</a></li>
-                        <li><a href="privacy.html">隐私政策</a></li>
-                        <li><a href="third-party.html">第三方SDK</a></li>
+                        <li><a href="terms.html" data-i18n="common.terms">用户协议</a></li>
+                        <li><a href="privacy.html" data-i18n="common.privacy">隐私政策</a></li>
+                        <li><a href="third-party.html" data-i18n="common.thirdParty">第三方SDK</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>联系我们</h3>
+                    <h3 data-i18n="common.contact">联系我们</h3>
                     <ul>
-                        <li><a href="mailto:contact@wisepic.com">contact@wisepic.com</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">Twitter</a></li>
+                        <li><a href="mailto:xlingdev@gmail.com">xlingdev@gmail.com</a></li>
+                        <li><a href="#" data-i18n="index.github">GitHub</a></li>
+                        <li><a href="#" data-i18n="index.twitter">Twitter</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>© 2026 WisePic. 保留所有权利。</p>
+                <p data-i18n="common.copyright">© 2026 WisePic. 保留所有权利。</p>
             </div>
         </div>
     </footer>
@@ -508,6 +561,24 @@
                 mobileMenuBtn.textContent = '☰';
             }
         });
+
+        function syncPolicyLanguageBlocks() {
+            const lang = document.documentElement.getAttribute('lang') || localStorage.getItem('wisepic_lang') || 'en';
+            const zhBlocks = document.querySelectorAll('.policy-lang-content.lang-zh');
+            const enBlocks = document.querySelectorAll('.policy-lang-content.lang-en');
+            const showZh = lang.startsWith('zh');
+
+            zhBlocks.forEach(el => el.classList.toggle('active', showZh));
+            enBlocks.forEach(el => el.classList.toggle('active', !showZh));
+        }
+
+        syncPolicyLanguageBlocks();
+        const languageSelect = document.getElementById('languageSelect');
+        if (languageSelect) {
+            languageSelect.addEventListener('change', () => setTimeout(syncPolicyLanguageBlocks, 0));
+        }
+        const langObserver = new MutationObserver(syncPolicyLanguageBlocks);
+        langObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
     </script>
 </body>
 </html>

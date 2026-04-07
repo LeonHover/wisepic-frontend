@@ -490,14 +490,11 @@
             <h2 class="section-title" data-i18n="index.downloadTitle">立即体验 WisePic</h2>
             <p data-i18n="index.downloadText">目前支持 Android 平台，iOS 版本即将上线</p>
             <div class="download-buttons">
-                <a href="#" class="download-btn" data-i18n="index.googlePlay">
+                <a href="https://play.google.com/store/apps/details?id=io.github.leonhover.wisepic" id="googlePlayBtn" class="download-btn" data-i18n="index.googlePlay">
                     <span>📲</span> Google Play 下载
                 </a>
-                <a href="#" class="download-btn" data-i18n="index.directDownload">
-                    <span>⬇️</span> 直接下载 APK
-                </a>
             </div>
-            <p style="margin-top: 20px; color: #CCCCCC; font-size: 14px;" data-i18n="index.downloadNote">*下载链接即将公布，敬请期待</p>
+            <p style="margin-top: 20px; color: #CCCCCC; font-size: 14px;" data-i18n="index.downloadNote">*点击后将在 Android 设备优先打开应用商店详情页。</p>
         </section>
     </div>
 
@@ -528,7 +525,7 @@
                 <div class="footer-column">
                     <h3 data-i18n="common.contact">联系我们</h3>
                     <ul>
-                        <li><a href="mailto:contact@wisepic.com">contact@wisepic.com</a></li>
+                        <li><a href="mailto:xlingdev@gmail.com">xlingdev@gmail.com</a></li>
                         <li><a href="#" data-i18n="index.github">GitHub</a></li>
                         <li><a href="#" data-i18n="index.twitter">Twitter</a></li>
                     </ul>
@@ -586,6 +583,53 @@
                 mobileMenuBtn.textContent = '☰';
             }
         });
+
+        // Google Play 下载跳转：Android 优先打开商店详情，否则回退到网页地址
+        const PLAY_PACKAGE = 'io.github.leonhover.wisepic';
+        const PLAY_WEB_URL = `https://play.google.com/store/apps/details?id=${PLAY_PACKAGE}`;
+        const PLAY_MARKET_URL = `market://details?id=${PLAY_PACKAGE}`;
+        const googlePlayBtn = document.getElementById('googlePlayBtn');
+
+        function openGooglePlayDetails(event) {
+            event.preventDefault();
+            const isAndroid = /Android/i.test(navigator.userAgent);
+            if (!isAndroid) {
+                window.location.href = PLAY_WEB_URL;
+                return;
+            }
+
+            let appStoreOpened = false;
+            let fallbackTimer = null;
+
+            const onVisibilityChange = () => {
+                if (document.hidden) {
+                    appStoreOpened = true;
+                    cleanup();
+                }
+            };
+
+            const cleanup = () => {
+                document.removeEventListener('visibilitychange', onVisibilityChange);
+                if (fallbackTimer) {
+                    clearTimeout(fallbackTimer);
+                    fallbackTimer = null;
+                }
+            };
+
+            document.addEventListener('visibilitychange', onVisibilityChange);
+            fallbackTimer = setTimeout(() => {
+                if (!appStoreOpened) {
+                    cleanup();
+                    window.location.href = PLAY_WEB_URL;
+                }
+            }, 1200);
+
+            window.location.href = PLAY_MARKET_URL;
+        }
+
+        if (googlePlayBtn) {
+            googlePlayBtn.addEventListener('click', openGooglePlayDetails);
+        }
     </script>
 </body>
 </html>

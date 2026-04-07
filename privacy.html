@@ -182,6 +182,14 @@
             margin-bottom: 40px;
         }
 
+        .policy-lang-content {
+            display: none;
+        }
+
+        .policy-lang-content.active {
+            display: block;
+        }
+
         .back-to-home {
             display: inline-block;
             margin-top: 30px;
@@ -346,72 +354,163 @@
     <div class="container">
         <div class="content">
             <h1 data-i18n="privacy.pageTitle">WisePic 隐私政策</h1>
-            <p class="last-updated">最后更新日期：【请填写】</p>
+            <p class="last-updated">最后更新日期：2026-04-07</p>
 
-            <div class="highlight">
-                <p><strong>重要提示：</strong>我们非常重视您的隐私。本政策描述了 WisePic 如何收集、使用、存储和保护您的个人信息。请仔细阅读，以了解我们对您个人信息的处理方式。</p>
+            <div class="policy-lang-content lang-zh active">
+                <div class="highlight">
+                    <p><strong>重要提示：</strong>WisePic 重视您的个人信息与隐私安全。本政策将说明我们如何处理个人信息、如何申请和使用系统权限、以及第三方 SDK 在提供服务过程中可能处理的数据。</p>
+                </div>
+
+                <p>欢迎使用 WisePic（以下简称“本应用”）。请在使用前认真阅读并理解本政策。您使用本应用即表示您已了解本政策所述的数据处理规则。</p>
+
+                <h2>1. 我们处理的信息范围</h2>
+                <p>1.1 <strong>本地图片与编辑数据：</strong>您在应用内选择、编辑、导出的图片主要在设备本地处理。我们不会因基础图片编辑功能主动上传您的原始图片到自有服务器。</p>
+                <p>1.2 <strong>设备与日志信息：</strong>为保障服务稳定性与安全性，我们或第三方 SDK 可能处理必要的设备与日志信息，例如设备型号、系统版本、应用版本、网络状态、操作事件与错误日志。</p>
+                <p>1.3 <strong>应用标识符与归因信息：</strong>在启用统计分析相关能力时，第三方 SDK 可能处理应用实例标识符、安装归因信息、广告标识符（AD_ID）等，用于效果评估与统计分析。</p>
+
+                <h2>2. 权限申请与使用说明</h2>
+                <p>我们遵循“最小必要”原则，仅在对应功能触发时申请权限。您可在系统设置中关闭权限，但可能导致相关功能不可用。</p>
+                <ul>
+                    <li><strong>android.permission.READ_MEDIA_IMAGES（Android 13+）/ android.permission.READ_EXTERNAL_STORAGE（Android 12 及以下）：</strong>用于读取您主动选择的图片。拒绝后，您将无法从系统相册选择图片进行编辑。</li>
+                    <li><strong>android.permission.READ_MEDIA_VIDEO（Android 13+）：</strong>用于读取您主动选择的视频媒体（如功能触发）。拒绝后，相关媒体选择能力将受限。</li>
+                    <li><strong>android.permission.WRITE_EXTERNAL_STORAGE（仅 Android 9 及以下）：</strong>用于将编辑结果保存到公共目录。拒绝后，旧系统下保存到系统公共相册可能失败。</li>
+                    <li><strong>android.permission.ACCESS_MEDIA_LOCATION：</strong>用于在必要场景读取媒体元数据（如 EXIF 拍摄信息）。拒绝后，相关元数据能力可能不可用。</li>
+                    <li><strong>android.permission.VIBRATE：</strong>用于交互振动反馈。关闭后不影响核心编辑能力。</li>
+                    <li><strong>android.permission.INTERNET：</strong>用于网络连接、第三方 SDK 通信与页面资源访问；若网络不可用，在线相关能力将受限。</li>
+                </ul>
+                <p>权限关闭路径示例：系统“设置 - 应用 - WisePic - 权限”。</p>
+
+                <h2>3. 第三方 SDK 与自动声明权限</h2>
+                <p>为实现统计分析、图片处理、文件能力等功能，我们集成了第三方 SDK。详情请见《<a href="third-party.html">第三方SDK列表</a>》。如需提交 Google Play 数据删除请求，请访问《<a href="google-data-deletion.html">Google 商店数据删除页面</a>》。</p>
+                <p>部分权限由第三方 SDK 或依赖自动合并声明（如 ACCESS_NETWORK_STATE、WAKE_LOCK、INSTALL_REFERRER、AD_ID、ADServices 相关权限）。这些声明用于统计归因、网络状态判断、任务调度与 SDK 运行支持。</p>
+                <p><strong>关于 AD_ID：</strong>我们在当前版本中将其用于统计归因与效果评估，不用于基于个人画像的个性化广告投放；也不会将 AD_ID 与您的姓名、手机号等直接身份信息进行绑定。</p>
+
+                <h2>4. 应用组件与系统服务说明</h2>
+                <p>为实现文件访问、统计初始化与运行保障，本应用在 AndroidManifest 中声明或由依赖自动合并以下组件能力：</p>
+                <ul>
+                    <li><strong>FileProvider 相关组件：</strong>用于应用内文件分享和临时 URI 授权，不对外公开应用私有目录。</li>
+                    <li><strong>FirebaseInitProvider / ComponentDiscoveryService：</strong>用于第三方 SDK 初始化与组件发现。</li>
+                    <li><strong>AppMeasurementService / AppMeasurementJobService / AppMeasurementReceiver：</strong>用于统计任务调度与事件处理。</li>
+                    <li><strong>InitializationProvider（AndroidX Startup）：</strong>用于 AndroidX 组件初始化。</li>
+                </ul>
+                <p>上述组件不改变本政策列明的数据处理目的与范围。</p>
+
+                <h2>5. 我们如何使用信息</h2>
+                <ul>
+                    <li>提供图片选择、编辑、导出与保存等核心功能；</li>
+                    <li>进行稳定性维护、故障排查与性能优化；</li>
+                    <li>统计功能使用情况，评估产品改进效果；</li>
+                    <li>满足法律法规或监管要求。</li>
+                </ul>
+
+                <h2>6. 信息共享、转让与公开披露</h2>
+                <p>6.1 我们不会出售您的个人信息。</p>
+                <p>6.2 在以下情形中，我们可能共享必要信息：获得您的单独同意、履行法定义务、或为保障服务安全与合法权益。</p>
+                <p>6.3 对于接入的第三方 SDK，我们会要求其在合法、正当、必要范围内处理信息。</p>
+
+                <h2>7. 存储与安全</h2>
+                <p>7.1 您在应用内处理的图片文件主要存储于您的设备本地。</p>
+                <p>7.2 我们采取合理的技术与管理措施保护信息安全，包括访问控制、最小权限、日志审计与安全加固。</p>
+                <p>7.3 尽管如此，互联网传输与电子存储无法保证绝对安全，请您理解相关风险。</p>
+
+                <h2>8. 您的权利</h2>
+                <p>在适用法律范围内，您可通过本政策提供的联系方式行使以下权利：</p>
+                <ul>
+                    <li>访问、更正、删除个人信息；</li>
+                    <li>撤回同意或变更授权范围；</li>
+                    <li>获取第三方 SDK 数据处理说明；</li>
+                    <li>投诉与举报。</li>
+                </ul>
+                <p>我们通常将在收到请求后 15 个工作日内完成核验并答复。</p>
+
+                <h2>9. 未成年人保护</h2>
+                <p>若您为未满 18 周岁的未成年人，请在监护人同意与指导下使用本应用。若我们发现未在监护人同意下处理未成年人个人信息，将依法尽快删除或匿名化处理。</p>
+
+                <h2>10. 政策更新</h2>
+                <p>我们可能根据业务变化、法律法规更新或商店合规要求更新本政策。更新后版本将在本页面公布，并标注“最后更新日期”。重大变更将以适当方式提示您。</p>
+
+                <h2>11. 联系我们</h2>
+                <p>如您对本政策或个人信息处理有疑问、意见或投诉，请联系我们：</p>
+                <p>邮箱：xlingdev@gmail.com</p>
             </div>
 
-            <p>欢迎使用 WisePic 图片编辑软件（以下简称"本软件"）。我们深知个人信息对您的重要性，并会尽全力保护您的个人信息安全可靠。我们致力于维持您对我们的信任，恪守以下原则保护您的个人信息：权责一致原则、目的明确原则、选择同意原则、最少够用原则、公开透明原则、确保安全原则。</p>
+            <div class="policy-lang-content lang-en">
+                <div class="highlight">
+                    <p><strong>Important Notice:</strong> WisePic values your privacy and data security. This policy explains how we process personal information, how system permissions are requested and used, and what data may be processed by third-party SDKs.</p>
+                </div>
 
-            <h2>1. 我们收集的信息</h2>
-            <p>1.1 <strong>设备信息：</strong>为了提供基本服务，我们可能会收集您的设备型号、操作系统版本、唯一设备标识符（如 Android ID）、IP 地址等信息。</p>
-            <p>1.2 <strong>使用数据：</strong>我们可能会收集您使用本软件时的操作日志，包括功能使用频率、崩溃报告、性能数据等，以改进软件体验。</p>
-            <p>1.3 <strong>图片数据：</strong>您使用本软件编辑的图片仅存储在您的设备本地，我们不会主动上传或存储您的图片。部分功能（如格式转换）可能需要在设备本地处理图片，但不会将图片传输到我们的服务器。</p>
-            <p>1.4 <strong>位置信息：</strong>我们不会收集您的精确位置信息。</p>
+                <p>Welcome to WisePic (the "App"). Please read and understand this policy before using the App. By using the App, you acknowledge the data processing practices described here.</p>
 
-            <h2>2. 我们如何使用信息</h2>
-            <p>2.1 我们可能将收集的信息用于以下目的：</p>
-            <ul>
-                <li>提供、维护和改进本软件的功能和服务；</li>
-                <li>分析使用情况，优化用户体验；</li>
-                <li>诊断和解决技术问题；</li>
-                <li>防止欺诈和滥用行为；</li>
-                <li>遵守法律法规的要求。</li>
-            </ul>
-            <p>2.2 我们不会将您的个人信息用于任何商业营销目的，也不会向第三方出售您的个人信息。</p>
+                <h2>1. Scope of Information We Process</h2>
+                <p>1.1 <strong>Local images and editing data:</strong> Images you select, edit, and export are primarily processed on your device. We do not proactively upload your original images to our own servers for basic editing features.</p>
+                <p>1.2 <strong>Device and log information:</strong> To maintain stability and security, we or our third-party SDKs may process necessary data such as device model, OS version, app version, network state, operation events, and error logs.</p>
+                <p>1.3 <strong>Identifiers and attribution information:</strong> When analytics features are enabled, third-party SDKs may process app instance identifiers, install attribution information, and advertising identifiers (AD_ID) for effectiveness analysis and attribution.</p>
 
-            <h2>3. 信息的存储与保护</h2>
-            <p>3.1 我们采用合理的安全措施保护您的个人信息，防止未经授权的访问、使用、修改或泄露。</p>
-            <p>3.2 您的个人信息将存储在中国境内的服务器上，并按照相关法律法规规定的期限保存。</p>
-            <p>3.3 尽管我们已采取合理的安全措施，但任何互联网传输或电子存储方法都无法保证100%安全。我们无法保证信息的绝对安全。</p>
+                <h2>2. Permissions and Usage</h2>
+                <p>We follow the principle of data minimization and request permissions only when corresponding features are triggered. You may disable permissions in system settings, but related features may become unavailable.</p>
+                <ul>
+                    <li><strong>android.permission.READ_MEDIA_IMAGES (Android 13+) / android.permission.READ_EXTERNAL_STORAGE (Android 12 and below):</strong> Used to read images you actively select. If denied, image selection from the system gallery will not be available.</li>
+                    <li><strong>android.permission.READ_MEDIA_VIDEO (Android 13+):</strong> Used to read selected video media where applicable. If denied, related media selection features may be limited.</li>
+                    <li><strong>android.permission.WRITE_EXTERNAL_STORAGE (Android 9 and below only):</strong> Used to save edited files to public directories. If denied, saving to public albums on older systems may fail.</li>
+                    <li><strong>android.permission.ACCESS_MEDIA_LOCATION:</strong> Used when necessary to read media metadata (for example EXIF information). If denied, related metadata features may be unavailable.</li>
+                    <li><strong>android.permission.VIBRATE:</strong> Used for haptic feedback. Disabling it does not affect core editing features.</li>
+                    <li><strong>android.permission.INTERNET:</strong> Used for network connectivity, third-party SDK communication, and page resources. Online features may be limited when network access is unavailable.</li>
+                </ul>
+                <p>Example path to manage permissions: Settings - Apps - WisePic - Permissions.</p>
 
-            <h2>4. 信息的共享与披露</h2>
-            <p>4.1 我们不会与任何第三方共享您的个人信息，除非：</p>
-            <ul>
-                <li>获得您的明确同意；</li>
-                <li>根据法律法规或政府机关的要求；</li>
-                <li>为保护我们或第三方的合法权益；</li>
-                <li>为履行本软件的服务条款或处理纠纷。</li>
-            </ul>
-            <p>4.2 我们可能使用第三方服务提供商协助提供服务（如数据分析、崩溃报告），这些提供商会根据合同约定处理信息，且不得用于其他目的。</p>
+                <h2>3. Third-party SDKs and Automatically Declared Permissions</h2>
+                <p>To provide analytics, image processing, and file-related capabilities, we integrate third-party SDKs. See the <a href="third-party.html">Third-party SDK List</a> for details. For Google Play data deletion requests, please visit the <a href="google-data-deletion.html">Google Play Data Deletion page</a>.</p>
+                <p>Some permissions are automatically merged by third-party SDKs or dependencies (such as ACCESS_NETWORK_STATE, WAKE_LOCK, INSTALL_REFERRER, AD_ID, and ADServices-related permissions). They are used for attribution, network state checks, task scheduling, and SDK runtime support.</p>
+                <p><strong>About AD_ID:</strong> In the current version, AD_ID is used for attribution and effectiveness analysis. It is not used for personalized advertising based on user profiling, and it is not bound to direct identity data such as your name or phone number.</p>
 
-            <h2>5. 第三方服务</h2>
-            <p>5.1 本软件可能包含第三方服务（如广告、分析工具），这些服务有自己的隐私政策。我们建议您阅读这些政策。</p>
-            <p>5.2 我们不对第三方服务的隐私实践负责。关于第三方SDK的详细信息，请参阅《<a href="third-party.html">第三方SDK列表</a>》。</p>
+                <h2>4. App Components and System Services</h2>
+                <p>To support file access, analytics initialization, and runtime operations, the App declares or automatically merges the following components in AndroidManifest:</p>
+                <ul>
+                    <li><strong>FileProvider-related components:</strong> Used for in-app file sharing and temporary URI grants, without exposing private app directories.</li>
+                    <li><strong>FirebaseInitProvider / ComponentDiscoveryService:</strong> Used for third-party SDK initialization and component discovery.</li>
+                    <li><strong>AppMeasurementService / AppMeasurementJobService / AppMeasurementReceiver:</strong> Used for analytics task scheduling and event handling.</li>
+                    <li><strong>InitializationProvider (AndroidX Startup):</strong> Used for AndroidX component initialization.</li>
+                </ul>
+                <p>These components do not change the purposes and scope of data processing stated in this policy.</p>
 
-            <h2>6. 您的权利</h2>
-            <p>6.1 您有权：</p>
-            <ul>
-                <li>了解我们如何处理您的个人信息；</li>
-                <li>要求访问、更正或删除您的个人信息；</li>
-                <li>撤回之前给予的同意；</li>
-                <li>投诉或举报个人信息处理行为。</li>
-            </ul>
-            <p>6.2 如需行使上述权利，请通过本政策末尾的联系方式与我们联系。</p>
+                <h2>5. How We Use Information</h2>
+                <ul>
+                    <li>Provide core features such as image selection, editing, export, and saving;</li>
+                    <li>Maintain stability, troubleshoot issues, and optimize performance;</li>
+                    <li>Analyze usage to improve product experience;</li>
+                    <li>Comply with applicable laws and regulatory requirements.</li>
+                </ul>
 
-            <h2>7. 未成年人保护</h2>
-            <p>7.1 我们非常重视未成年人的个人信息保护。如果您是未满18周岁的未成年人，请在父母或监护人的指导下使用本软件。</p>
-            <p>7.2 如果我们发现自己在未获得父母或监护人同意的情况下收集了未成年人的个人信息，会设法尽快删除相关信息。</p>
+                <h2>6. Sharing, Transfer, and Public Disclosure</h2>
+                <p>6.1 We do not sell your personal information.</p>
+                <p>6.2 We may share necessary data under circumstances such as your separate consent, legal obligations, or protection of service security and lawful rights.</p>
+                <p>6.3 For integrated third-party SDKs, we require lawful, proper, and necessary data processing.</p>
 
-            <h2>8. 政策的变更</h2>
-            <p>8.1 我们可能会不时更新本政策。更新后的政策将在本软件或网站上公布，重要变更会通过适当方式通知您。</p>
-            <p>8.2 您继续使用本软件即表示接受更新后的政策。</p>
+                <h2>7. Storage and Security</h2>
+                <p>7.1 Images processed in the App are primarily stored on your device.</p>
+                <p>7.2 We adopt reasonable technical and organizational measures, including access control, least privilege, logging, and security hardening.</p>
+                <p>7.3 Despite these measures, no internet transmission or electronic storage can guarantee absolute security.</p>
 
-            <h2>9. 联系我们</h2>
-            <p>如果您对本隐私政策有任何疑问、意见或建议，请通过以下方式联系我们：</p>
-            <p>邮箱：【请填写】</p>
-            <p>我们将在收到您的请求后15个工作日内回复。</p>
+                <h2>8. Your Rights</h2>
+                <p>Subject to applicable law, you may contact us to exercise the following rights:</p>
+                <ul>
+                    <li>Access, correct, or delete personal information;</li>
+                    <li>Withdraw consent or adjust authorization scope;</li>
+                    <li>Request explanations about third-party SDK data processing;</li>
+                    <li>File complaints or reports.</li>
+                </ul>
+                <p>We usually verify and respond within 15 business days after receiving your request.</p>
+
+                <h2>9. Protection of Minors</h2>
+                <p>If you are under 18, please use the App with guardian consent and guidance. If we discover processing of minors' personal information without required consent, we will delete or anonymize it as required by law.</p>
+
+                <h2>10. Policy Updates</h2>
+                <p>We may update this policy due to business changes, legal and regulatory updates, or app store compliance requirements. Updated versions will be posted on this page with the "Last Updated" date. Material changes will be notified appropriately.</p>
+
+                <h2>11. Contact Us</h2>
+                <p>If you have questions, suggestions, or complaints about this policy or personal information processing, contact us at:</p>
+                <p>Email: xlingdev@gmail.com</p>
+            </div>
 
             <a href="index.html" class="back-to-home" data-i18n="privacy.backToHome">← 返回首页</a>
         </div>
@@ -422,36 +521,36 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>WisePic</h3>
-                    <p style="color: #CCCCCC;">让图片编辑变得更简单、更智能。</p>
+                    <h3 data-i18n="common.siteName">WisePic</h3>
+                    <p style="color: #CCCCCC;" data-i18n="index.footerTagline">让图片编辑变得更简单、更智能。</p>
                 </div>
                 <div class="footer-column">
-                    <h3>快速链接</h3>
+                    <h3 data-i18n="index.quickLinks">快速链接</h3>
                     <ul>
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="index.html#features">功能</a></li>
-                        <li><a href="index.html#download">下载</a></li>
+                        <li><a href="index.html" data-i18n="common.home">首页</a></li>
+                        <li><a href="index.html#features" data-i18n="common.features">功能</a></li>
+                        <li><a href="index.html#download" data-i18n="common.download">下载</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>法律条款</h3>
+                    <h3 data-i18n="index.legal">法律条款</h3>
                     <ul>
-                        <li><a href="terms.html">用户协议</a></li>
-                        <li><a href="privacy.html">隐私政策</a></li>
-                        <li><a href="third-party.html">第三方SDK</a></li>
+                        <li><a href="terms.html" data-i18n="common.terms">用户协议</a></li>
+                        <li><a href="privacy.html" data-i18n="common.privacy">隐私政策</a></li>
+                        <li><a href="third-party.html" data-i18n="common.thirdParty">第三方SDK</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>联系我们</h3>
+                    <h3 data-i18n="common.contact">联系我们</h3>
                     <ul>
-                        <li><a href="mailto:contact@wisepic.com">contact@wisepic.com</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">Twitter</a></li>
+                        <li><a href="mailto:xlingdev@gmail.com">xlingdev@gmail.com</a></li>
+                        <li><a href="#" data-i18n="index.github">GitHub</a></li>
+                        <li><a href="#" data-i18n="index.twitter">Twitter</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>© 2026 WisePic. 保留所有权利。</p>
+                <p data-i18n="common.copyright">© 2026 WisePic. 保留所有权利。</p>
             </div>
         </div>
     </footer>
@@ -485,6 +584,24 @@
                 mobileMenuBtn.textContent = '☰';
             }
         });
+
+        function syncPolicyLanguageBlocks() {
+            const lang = document.documentElement.getAttribute('lang') || localStorage.getItem('wisepic_lang') || 'en';
+            const zhBlocks = document.querySelectorAll('.policy-lang-content.lang-zh');
+            const enBlocks = document.querySelectorAll('.policy-lang-content.lang-en');
+            const showZh = lang.startsWith('zh');
+
+            zhBlocks.forEach(el => el.classList.toggle('active', showZh));
+            enBlocks.forEach(el => el.classList.toggle('active', !showZh));
+        }
+
+        syncPolicyLanguageBlocks();
+        const languageSelect = document.getElementById('languageSelect');
+        if (languageSelect) {
+            languageSelect.addEventListener('change', () => setTimeout(syncPolicyLanguageBlocks, 0));
+        }
+        const langObserver = new MutationObserver(syncPolicyLanguageBlocks);
+        langObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
     </script>
 </body>
 </html>

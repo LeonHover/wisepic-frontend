@@ -8,7 +8,7 @@
     "privacy": "Privacy Policy",
     "thirdParty": "Third-party SDK",
     "contact": "Contact Us",
-    "contactEmail": "contact@wisepic.com",
+    "contactEmail": "xlingdev@gmail.com",
     "copyright": "© 2026 WisePic. All rights reserved.",
     "language": "Language",
     "chinese": "中文",
@@ -35,7 +35,7 @@
     "downloadText": "Currently available on Android, iOS version coming soon",
     "googlePlay": "Download on Google Play",
     "directDownload": "Direct APK Download",
-    "downloadNote": "*Download links will be announced soon, stay tuned",
+    "downloadNote": "*On Android, tapping this will try to open the app store details page first.",
     "footerTagline": "Making image editing simpler and smarter.",
     "quickLinks": "Quick Links",
     "legal": "Legal Terms",
@@ -55,6 +55,23 @@
   "thirdParty": {
     "title": "Third-party SDK",
     "pageTitle": "Third-party SDK List",
+    "backToHome": "← Back to Home"
+  },
+  "dataDeletion": {
+    "title": "Google Play Data Deletion",
+    "pageTitle": "Google Play Data Deletion",
+    "subtitle": "This page explains Google Play data deletion compliance. You can submit a deletion request by email.",
+    "section1Title": "1. How to Request Deletion",
+    "methodPrefix": "If you want to delete personal data related to WisePic, please send your request to:",
+    "section2Title": "2. Recommended Information to Provide",
+    "item1": "Your contact email address;",
+    "item2": "Your in-app user identifier (if available);",
+    "item3": "The scope of data you want deleted (for example, account data or usage records).",
+    "section3Title": "3. Processing Timeline",
+    "processing": "After receiving your request, we will verify identity and scope as soon as possible and reply with progress or result within 14 business days.",
+    "section4Title": "4. Additional Notes",
+    "note1": "Local photos, cache, and exported files on your device can be deleted directly by you.",
+    "note2": "If laws or regulations require retention of certain information, we will handle and retain it only within the legally required scope and explain it to you.",
     "backToHome": "← Back to Home"
   }
 }

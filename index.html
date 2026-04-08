@@ -223,6 +223,97 @@
             color: #CCCCCC;
         }
 
+        /* Hero 区域应用截图水平居中 */
+        .hero-screenshots {
+            margin-top: 50px;
+            width: 100%;
+        }
+
+        .screenshots-row {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 30px;
+            padding: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .screenshot-item {
+            flex-shrink: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .screenshot-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .phone-mockup {
+            width: 180px;
+            height: auto;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .screenshot-item:hover .phone-mockup {
+            box-shadow: 
+                0 30px 60px rgba(50, 213, 131, 0.25),
+                0 0 0 2px rgba(50, 213, 131, 0.2);
+        }
+
+        .phone-mockup img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 16px;
+        }
+
+        /* 响应式 Hero 截图 */
+        @media (max-width: 1024px) {
+            .screenshots-row {
+                gap: 24px;
+            }
+            .phone-mockup {
+                width: 160px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-screenshots {
+                margin-top: 40px;
+            }
+
+            .screenshots-row {
+                gap: 16px;
+                padding: 15px 0;
+            }
+
+            .phone-mockup {
+                width: 130px;
+                border-radius: 12px;
+            }
+
+            .phone-mockup img {
+                border-radius: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .screenshots-row {
+                gap: 12px;
+            }
+
+            .phone-mockup {
+                width: 110px;
+                border-radius: 10px;
+            }
+
+            .phone-mockup img {
+                border-radius: 10px;
+            }
+        }
+
         /* 下载区域 */
         .download-section {
             background: #1A1A1E;
@@ -441,11 +532,42 @@
     </header>
 
     <!-- 英雄区域 -->
-        <section class="hero" >
+    <section class="hero">
         <div class="container">
             <h1 data-i18n="index.heroTitle">智能图片编辑，简单如你所想</h1>
             <p data-i18n="index.heroDescription">WisePic 是一款功能强大的图片编辑工具，提供剪裁、旋转、滤镜、基础调整、压缩和格式转换等核心功能，让您的图片处理变得轻松高效。</p>
             <a href="#download" class="cta-button" data-i18n="index.ctaButton">立即下载</a>
+            
+            <!-- 应用截图展示 -->
+            <div class="hero-screenshots">
+                <div class="screenshots-row">
+                    <div class="screenshot-item">
+                        <div class="phone-mockup">
+                            <img src="static/Screenshot_1.png" alt="主界面" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="phone-mockup">
+                            <img src="static/Screenshot_2.png" alt="相册" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="phone-mockup">
+                            <img src="static/Screenshot_4.png" alt="裁剪" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="phone-mockup">
+                            <img src="static/Screenshot_5.png" alt="调整" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="phone-mockup">
+                            <img src="static/Screenshot_6.png" alt="滤镜" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -526,8 +648,6 @@
                     <h3 data-i18n="common.contact">联系我们</h3>
                     <ul>
                         <li><a href="mailto:xlingdev@gmail.com">xlingdev@gmail.com</a></li>
-                        <li><a href="#" data-i18n="index.github">GitHub</a></li>
-                        <li><a href="#" data-i18n="index.twitter">Twitter</a></li>
                     </ul>
                 </div>
             </div>
